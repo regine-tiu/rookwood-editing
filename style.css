@@ -1,0 +1,84 @@
+/*
+Theme Name:     Neve Child
+Theme URI:      https://themeisle.com/themes/neve/
+Template: neve
+Author:         ThemeIsle
+Author URI:     https://themeisle.com
+Description:    Neve is a super fast, easily customizable, multi-purpose theme. It’s perfect for blogs, small business, startups, agencies, firms, e-commerce shops (WooCommerce storefront) as well as personal portfolio sites and most types of projects. A fully AMP optimized and responsive theme, Neve will load in mere seconds and adapt perfectly on any viewing device. While it is lightweight and has a minimalist design, the theme is highly extendable, it has a highly SEO optimized code, resulting in top rankings in Google search results. Neve works perfectly with Gutenberg and the most popular page builders (Elementor, Brizy, Beaver Builder, Visual Composer, SiteOrigin, Divi). Neve is also WooCommerce ready, responsive, RTL & translation ready. Look no further. Neve is the perfect theme for you!
+Version:        1.0.0
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:    neve
+Tags: blog, custom-logo, e-commerce, rtl-language-support, post-formats, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, wide-blocks, block-styles
+*/
+
+
+/* ------------<<<<<  G L O B A L >>>>---------------- */
+body, html {
+  font-family: 'Open Sans'
+}
+
+
+/* --------------------- H E A D E R -------------------- */
+
+
+/* Site Title & Logo */
+.site-logo h1, .site-logo p {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* Nav Menu */
+.builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret {
+  font-family: 'IBM Plex Serif', serif;
+  color: red;
+}
+
+a {
+  cursor: pointer;
+  color: red;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #68A5D0;
+}
+
+
+/* ------------------- F O O T E R ------------------- */
+footer {
+  background-color: #BC742B;
+  margin-bottom: -50px;
+
+}
+
+.social-icons ul{
+  text-align: center;
+}
+
+.social-icons ul li {
+  display: inline-block;
+  padding-right: 40px;
+  margin-top: 40px;
+  
+}
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+}
+
+
+
+
+footer p {
+  text-align: center;  
+  color: #EFE5D8;
+  padding: 20px 0;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #EFE5D8;
+}
