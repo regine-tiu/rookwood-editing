@@ -79,30 +79,59 @@ header .header-logo {
   position: absolute;
   top: 15%;
   left: 7%;
-  padding: 40px;
+  padding: 35px 40px 30px 40px;
   width: 50%;
 }
 
 h2 {
   color: #BC742B;
   font-weight: 900;
-  font-size: 3em;
+  font-size: 3.1em;
   line-height: 1.3em;
 }
 
 h4 {
-  margin: 10 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3em;
 }
 
 h5 {
-  font-weight: 500;
-  font-size: 1.3em;
-  color: #509082;
+  font-weight: 700;
+  font-size: 1.1em;
+  
   text-align: center;
-  text-decoration: none;
+  margin-top: 45px;
+}
+
+.welcome-btn a:link,
+.welcome-btn a:visited {
+  color: #509082;
+  padding: 10px 50px;
+  border: 1px solid #509082;
+  border-radius: 30px; 
+}
+
+.welcome-btn a:hover,
+.welcome-btn a:active {
+  color: #fff;
+  border: 1.2px transparent #509082;
+  background-color: #509082;
+  transition: 0.2s;
 }
 
 
+
+a:focus {
+  color: #509082;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+ 
+}
 
 /* ------------------- F O O T E R ------------------- */
 footer {
