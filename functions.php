@@ -12,3 +12,57 @@ if ( ! function_exists( 'neve_child_load_css' ) ):
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
+
+
+// Create Custom Post Types
+
+// -------- A B O U T   M E --------//
+function create_custom_post_types_1() {
+  register_post_type( 'about_me',
+    array(
+      'labels' => array(
+          'name' => __( 'About Me' ),
+          'singular_name' => __( 'About Me Post' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array( 'slug' => 'about-me' ),
+      )
+    );
+}
+
+// -------- S E R V I C E S --------//
+function create_custom_post_types_2() {
+  register_post_type( 'services',
+    array(
+      'labels' => array(
+          'name' => __( 'Services' ),
+          'singular_name' => __( 'Services Post' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array( 'slug' => 'service' ),
+      )
+    );
+}
+
+// -------- T E S T I M O N I A L S --------//
+function create_custom_post_types_3() {
+  register_post_type( 'testimonials',
+    array(
+      'labels' => array(
+          'name' => __( 'Testimonial' ),
+          'singular_name' => __( 'Testimonials Post' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array( 'slug' => 'testimonial' ),
+      )
+    );
+}
+
+
+// Hook up Custom Post Types to WP Function
+add_action( 'init', 'create_custom_post_types_1' );
+add_action( 'init', 'create_custom_post_types_2' );
+add_action( 'init', 'create_custom_post_types_3' );

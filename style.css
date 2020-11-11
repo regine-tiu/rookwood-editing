@@ -15,11 +15,27 @@ Tags: blog, custom-logo, e-commerce, rtl-language-support, post-formats, grid-la
 
 /* ------------<<<<<  G L O B A L >>>>---------------- */
 body, html {
-  font-family: 'Open Sans'
+  font-family: 'ABeeZee', 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
 
 
 /* --------------------- H E A D E R -------------------- */
+header {
+  background-color: #BC742B;
+  text-align: center;
+}
+
+header .header-logo {
+  width: 40%;
+  height: auto;
+  padding-top: 35px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+}
 
 
 /* Site Title & Logo */
@@ -30,27 +46,68 @@ body, html {
 }
 
 /* Nav Menu */
-.builder-item--primary-menu .nav-menu-primary > .nav-ul li:not(.woocommerce-mini-cart-item) > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret > a, .builder-item--primary-menu .nav-menu-primary > .nav-ul .neve-mm-heading span, .builder-item--primary-menu .nav-menu-primary > .nav-ul .has-caret {
-  font-family: 'IBM Plex Serif', serif;
-  color: red;
+.hfg_header.site-header {
+  box-shadow: none;
 }
 
-a {
-  cursor: pointer;
-  color: red;
+.hfg_header .header-top-inner {
+  background-color: #BC742B;
+}
+
+.builder-item {
+  margin-top: 0;;
+}
+
+.nav-ul li {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.nv-nav-wrap ul li{
+  color: #EFE5D8;
+}
+
+
+/* Hero Img */
+.hero {
+  position: relative;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background-color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 7%;
+  padding: 40px;
+  width: 50%;
+}
+
+h2 {
+  color: #BC742B;
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1.3em;
+}
+
+h4 {
+  margin: 10 0;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.3em;
+  color: #509082;
+  text-align: center;
   text-decoration: none;
 }
 
-a:hover, a:focus {
-  color: #68A5D0;
-}
 
 
 /* ------------------- F O O T E R ------------------- */
 footer {
   background-color: #BC742B;
   margin-bottom: -50px;
-
 }
 
 .social-icons ul{
@@ -68,8 +125,6 @@ footer {
   width: 40px;
   height: auto;
 }
-
-
 
 
 footer p {
