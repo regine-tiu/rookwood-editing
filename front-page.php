@@ -15,16 +15,15 @@
 get_header(); ?>
 
 <section class="hero">
-  <img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/hero.jpg">
+	<img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/hero.png">
+	<div class="welcome-card">
+		<h2>Welcome to Rookwood Editing</h2>
+		<h4>Let’s work together to enhance your authorial vision and make your writing shine.</h4>
+		<div class="welcome-btn">
+			<h5><a href="#">Get in touch</a></h5>
+		</div>
+	</div>
 </section>
 
-	<div id="primary" class="home-page hero-content">
-		<div class="main-content" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>
-				<a class="button" href="<?php echo site_url('/blog/') ?>">View Our Work</a>
-			<?php endwhile; // end of the loop. ?>
-		</div><!-- .main-content -->
-	</div><!-- #primary -->
-
+	
 <?php get_footer(); ?>
