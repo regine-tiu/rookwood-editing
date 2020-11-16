@@ -32,13 +32,9 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 			<img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/header-logo.png">
 		</div>
 
-		<div class="nav">
-			<li>
-		</div>
+		
 
-		<a class="neve-skip-link show-on-focus" href="#content" tabindex="0">
-			<?php echo __( 'Skip to content', 'neve' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		</a>
+	
 		<?php
 		neve_before_header_trigger();
 		if ( apply_filters( 'neve_filter_toggle_content_parts', true, 'header' ) === true ) {

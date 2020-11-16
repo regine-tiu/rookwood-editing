@@ -15,7 +15,9 @@
 get_header(); ?>
 
 <section class="hero">
-	<img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/hero.png">
+	<div class="hero-img">
+		
+	</div>
 	<div class="welcome-card">
 		<h2>Welcome to Rookwood Editing</h2>
 		<h4>Let’s work together to enhance your authorial vision and make your writing shine.</h4>

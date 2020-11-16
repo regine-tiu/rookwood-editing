@@ -22,6 +22,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
+h1 {
+  color: #fff;
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 900;
+  margin: 0.4em 0;
+}
 
 /* --------------------- H E A D E R -------------------- */
 header {
@@ -73,14 +80,25 @@ header .header-logo {
   position: relative;
 }
 
+.hero-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
 /* Welcome Card */
 .welcome-card {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 40px 30px 40px;
   position: absolute;
   top: 15%;
   left: 7%;
-  padding: 35px 40px 30px 40px;
-  width: 50%;
+  width: 45%;
+  flex-basis: fit-content;
 }
 
 h2 {
@@ -155,7 +173,6 @@ footer {
   height: auto;
 }
 
-
 footer p {
   text-align: center;  
   color: #EFE5D8;
@@ -166,3 +183,26 @@ footer p a {
   text-decoration: none;
   color: #EFE5D8;
 }
+
+
+/* ------------------- P A G E S ------------------- */
+body {
+  background-color: #68A4D0;
+}
+
+
+/* CONTACT PAGE */
+.contact-form {
+margin: 0 0 6% 5%;
+color: rgb(58, 56, 56);
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  border-radius: 20px; 
+  border: none;
+  background-color: #509082;
+  color: #fff;
+  margin-top: 15px;
+  padding: 10px 30px;
+}
+
