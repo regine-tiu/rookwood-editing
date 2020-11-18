@@ -16,9 +16,11 @@ get_header(); ?>
 
 <section class="page">
 	<div class="row">
+    <div class="service-intro">
       <?php 
 					$intro = get_field("service_page_intro"); ?> 
         <?php echo $intro ; ?> 
+    </div>
 
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("service_image");

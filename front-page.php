@@ -19,7 +19,7 @@ get_header(); ?>
 		
 	</div>
 	<div class="welcome-card">
-		<h2>Welcome to Rookwood Editing</h2>
+		<h2>Welcome to <br> Rookwood Editing</h2>
 		<h4>Let’s work together to enhance your authorial vision and make your writing shine.</h4>
 		<div class="welcome-btn">
 			<h5><a href="#">Get in touch</a></h5>

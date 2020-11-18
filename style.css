@@ -126,7 +126,6 @@ h4 {
 h5 {
   font-weight: 700;
   font-size: 1.1em;
-  
   text-align: center;
   margin-top: 45px;
 }
@@ -198,23 +197,32 @@ h3 {
   text-align: center;
 }
 
+.service-intro {
+  font-style: italic;
+  line-height: 1.5em;
+  margin: 80px 13% 0 13%;
+  text-align: center;
+}
+
 article {
   margin-bottom: 100px;
 }
 
 .service-item {
   display: flex;
-  flex-direction: column;
+  
 }
 
 .service-item-images {
-  margin: 0 auto;
+  width: 44%;
+  display: inline-block;
+
 }
 
 .service-item-text {
   width: 55%;
   display: inline-block;
-  margin-left: 30px;
+  padding-left: 30px;
 }
 
 .tab-space {
@@ -225,16 +233,20 @@ article {
 @media (max-width: 768px) {
   .service-item-images {
     display: block;
+    margin: 0 20%;
+    padding-left: 30px;
     text-align: center;
-    width: 80%;
+    width: 60%;
+    
+
   }
   .service-item-text {
     display: block;
     text-align: center;
     margin-left: 0px;
     width: 100%
- 
   }
+}
 
 
 
