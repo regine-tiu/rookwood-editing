@@ -12,6 +12,7 @@ get_header();
 ?>
 <section class="page">
 	<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
+			
 			<?php while ( have_posts() ) : the_post(); ?>
 				<h1><?php the_title(); ?></h1>
 
