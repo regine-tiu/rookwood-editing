@@ -30,6 +30,9 @@ h1 {
   margin: 0.4em 0;
 }
 
+
+/* ------------ <<<<<  F R O N T  P A G E  >>>> ------------ */
+
 /* --------------------- H E A D E R -------------------- */
 header {
   background-color: #BC742B;
@@ -37,7 +40,7 @@ header {
 }
 
 header .header-logo {
-  width: 40%;
+  width: 35%;
   height: auto;
   padding-top: 35px;
   padding-bottom: 5px;
@@ -73,7 +76,6 @@ header .header-logo {
 .nv-nav-wrap ul li{
   color: #EFE5D8;
 }
-
 
 /* Hero Img */
 .hero {
@@ -140,8 +142,6 @@ h5 {
   transition: 0.2s;
 }
 
-
-
 a:focus {
   color: #509082;
 }
@@ -151,10 +151,19 @@ a:hover, a:focus {
  
 }
 
+/* --- Services Section --- */
+h6 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+
 /* ------------------- F O O T E R ------------------- */
 footer {
   background-color: #BC742B;
-  margin-bottom: -50px;
+  margin-bottom: -60px;
 }
 
 .social-icons ul{
@@ -165,7 +174,6 @@ footer {
   display: inline-block;
   padding-right: 40px;
   margin-top: 40px;
-  
 }
 
 .social-icons img {
@@ -185,10 +193,29 @@ footer p a {
 }
 
 
+
+/* ----------- A R C H I V E   P A G E S ----------- */
+
+h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+/* ABOUT PAGE */
+
+
+/* SERVICE PAGE */
+
+
+
+
+
 /* ------------------- P A G E S ------------------- */
-body {
+.page {
   background-color: #68A4D0;
 }
+
+
 
 
 /* CONTACT PAGE */
