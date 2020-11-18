@@ -30,11 +30,7 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<header class="<?php echo esc_attr( $header_classes ); ?>" role="banner">
 		<div class="header-logo">
 			<img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/header-logo.png">
-		</div>
-
-		
-
-	
+		</div>	
 		<?php
 		neve_before_header_trigger();
 		if ( apply_filters( 'neve_filter_toggle_content_parts', true, 'header' ) === true ) {

@@ -18,15 +18,15 @@ add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 
 // -------- A B O U T   M E --------//
 function create_custom_post_types_1() {
-  register_post_type( 'about_me',
+  register_post_type( 'about',
     array(
       'labels' => array(
-          'name' => __( 'About Me' ),
-          'singular_name' => __( 'About Me Post' )
+          'name' => __( 'About' ),
+          'singular_name' => __( 'About Post' )
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array( 'slug' => 'about-me' ),
+      'rewrite' => array( 'slug' => 'about' ),
       )
     );
 }
