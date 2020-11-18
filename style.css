@@ -190,7 +190,7 @@ footer p a {
 
 
 /* ------------------- P A G E S ------------------- */
-/* SERVICES*/
+/* --- SERVICES --- */
 h3 {
   color: #EFE5D8;
   font-size: 2em;
@@ -202,10 +202,13 @@ article {
   margin-bottom: 100px;
 }
 
+.service-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .service-item-images {
-  height: auto;
-  width: 35%;
-  display: inline-block;
+  margin: 0 auto;
 }
 
 .service-item-text {
@@ -217,6 +220,25 @@ article {
 .tab-space {
   padding-left: 50px;
 }
+
+/* --- services media queries --- */
+@media (max-width: 768px) {
+  .service-item-images {
+    display: block;
+    text-align: center;
+    width: 80%;
+  }
+  .service-item-text {
+    display: block;
+    text-align: center;
+    margin-left: 0px;
+    width: 100%
+ 
+  }
+
+
+
+
 
 /* CONTACT PAGE */
 .contact-form {
