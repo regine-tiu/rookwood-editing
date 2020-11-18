@@ -16,6 +16,7 @@ get_header(); ?>
 
 <section class="page">
 	<div class="row">
+    <h1>Services</h1>
     <div class="service-intro">
       <?php 
 					$intro = get_field("service_page_intro"); ?> 

@@ -36,6 +36,10 @@ h1 {
   width: 83.3%;
 }
 
+p {
+  line-height: ;
+}
+
 /* --------------------- H E A D E R -------------------- */
 header {
   background-color: #BC742B;
@@ -189,7 +193,7 @@ footer p a {
 
 
 /* ------------------- P A G E S ------------------- */
-/* --- SERVICES --- */
+/* --- ABOUT --- */
 h3 {
   color: #EFE5D8;
   font-size: 2em;
@@ -197,15 +201,32 @@ h3 {
   text-align: center;
 }
 
+.about-page-text {
+  display: inline-block;
+  width: 60%;
+  padding: 0 2%
+}
+
+.about-page-images {
+  width: 39%;
+  display: inline-block;
+}
+
+.about-summary {
+  display: inline-block;
+  height: 200px;
+}
+
+/* --- SERVICES --- */
 .service-intro {
   font-style: italic;
   line-height: 1.5em;
-  margin: 80px 13% 0 13%;
+  margin: 3% 13% -2% 13%;
   text-align: center;
 }
 
 article {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .service-item {
@@ -218,7 +239,6 @@ article {
   width: 39%;
   display: inline-block;
   padding-left: 10%;
-  padding-top: 5%;
 }
 
 .service-item-text {
@@ -251,8 +271,6 @@ article {
     padding: 0;
   }
 }
-
-
 
 
 
