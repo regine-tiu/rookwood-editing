@@ -22,7 +22,7 @@ do_action( 'neve_before_primary_end' );
 			<li><a href="#"><img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/ec-icon.png"></a></li>
 			<li><a href="#"><img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/mail-icon.png"></a></li>
 	</div>
-	<p> Copyright Rookwood Editing 2020 &#124; Designed by <a href="#"> Reggie B.</a></p>
+	<p> Copyright Rookwood Editing 2020 &#124; Designed by <a href="https://www.instagram.com/matcha_fiend/"> Reggie B.</a></p>
 </footer>
 </body>
 

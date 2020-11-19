@@ -51,7 +51,7 @@ function create_custom_post_types_3() {
   register_post_type( 'testimonials',
     array(
       'labels' => array(
-          'name' => __( 'Testimonial' ),
+          'name' => __( 'Testimonials' ),
           'singular_name' => __( 'Testimonials Post' )
       ),
       'public' => true,
