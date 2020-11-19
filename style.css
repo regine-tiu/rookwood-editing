@@ -207,15 +207,18 @@ h3 {
   padding: 0 2%
 }
 
-.about-page-images {
-  width: 39%;
+.about-page-sidebar {
+  width: 38%;
   display: inline-block;
+  padding-left: 5%;
+  float: right;
 }
 
 .about-summary {
   display: inline-block;
   height: 200px;
 }
+
 
 /* --- SERVICES --- */
 .service-intro {

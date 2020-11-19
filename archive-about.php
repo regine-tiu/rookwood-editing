@@ -21,26 +21,24 @@ get_header(); ?>
       	 $about_img = get_field("about_image");
          $about_summary = get_field("about_summary");
          $crow_feet_img = get_field("about_page_deco_img");
-         $size = "medium"; ?>
+         $size = "full"; ?>
             
-        <article class="about-section">
-          <div class="about-page-text">
-            <h3><?php the_title(); ?></h3>
-            
+        <div class="about-page-text">
+           <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
-          </div>  
-
-          <div class="about-page-images">
-            <div class="about-image"> 
-              <?php echo wp_get_attachment_image( $about_img, $size ); ?>
-            </div> 
-
-            <div class="about-summary">
-              <?php echo $about_summary; ?>
-            </div>
-          </div>
-        </article>	
+        </div>  
+        
       <?php endwhile; // end of the loop. ?>
+
+        <div class="about-page-sidebar">
+          <div class="about-image"> 
+            <img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/molly-rookwood-profilepic-e1605805144430.png">
+          </div> 
+
+          <div class="about-summary">
+             <?php echo $about_summary; ?>
+          </div>
+        </div>
 	</div>
 </section>
 
