@@ -37,7 +37,7 @@ h1 {
 }
 
 p {
-  line-height: ;
+  margin-bottom: 0;
 }
 
 /* --------------------- H E A D E R -------------------- */
@@ -289,9 +289,13 @@ article {
 }
 
 .testimonial {
-  width: 60%;
+  border: 1px solid #EFE5D8;
+  border-radius: 50px;
+  width: 50%;
   display: inline-block;
-  padding-right: 9%;
+  line-height: 1.4em;
+  padding: 3%;
+  text-align: center;
 }
 
 
@@ -301,7 +305,7 @@ article {
   .book-images {
     display: none;
   }
-  
+
   .testimonial {
     display: block;
     text-align: center;
