@@ -279,7 +279,7 @@ article {
 .testimonial-item {
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
 }
 
 .book-images {
@@ -294,11 +294,13 @@ article {
   width: 50%;
   display: inline-block;
   line-height: 1.4em;
-  padding: 3%;
+  padding: 5%;
   text-align: center;
 }
 
-
+.author-style {
+  font-weight: 600;
+}
 
 /* --- testimonials media queries --- */
 @media (max-width: 768px) {
