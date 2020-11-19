@@ -264,7 +264,6 @@ article {
     text-align: center;
     width: 60%;
     
-
   }
   .service-item-text {
     display: block;
@@ -276,16 +275,42 @@ article {
 }
 
 /* --- TESTIMONIALS --- */
-.testmonials {
-  width: 55%;
-  display: inline-block;
-  border: 2px solid #EFE5D8;
+
+.testimonial-item {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
-.book-cover {
-  width: 35%;
+.book-images {
+  width: 39%;
   display: inline-block;
+  padding-left: 10%;
 }
+
+.testimonial {
+  width: 60%;
+  display: inline-block;
+  padding-right: 9%;
+}
+
+
+
+/* --- testimonials media queries --- */
+@media (max-width: 768px) {
+  .book-images {
+    display: none;
+  }
+  
+  .testimonial {
+    display: block;
+    text-align: center;
+    margin-left: 0px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
 
 /* CONTACT PAGE */
 .contact-form {

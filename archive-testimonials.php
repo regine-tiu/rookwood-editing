@@ -22,12 +22,12 @@ get_header(); ?>
       			$image = get_field("book_cover");
             $size = "medium"; ?>
             
-        <article class="services-item">
-          <div class="service-item-images">
+        <article class="testimonial-item">
+          <div class="book-images">
               <?php echo wp_get_attachment_image( $image, $size ); ?>
           </div>
 
-          <aside class="service-item-text">
+          <aside class="testimonial">
             <?php the_content(); ?>
           </aside>  
         </article>	
