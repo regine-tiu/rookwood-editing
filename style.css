@@ -32,6 +32,7 @@ h1 {
 }
 
 .row {
+  justify-content: center;
   margin: 0 auto;
   width: 83.3%;
 }
@@ -54,6 +55,9 @@ header .header-logo {
   margin: 0 auto;
 }
 
+.header-logo img {
+  height: auto;
+}
 
 /* Site Title & Logo */
 .site-logo h1, .site-logo p {
@@ -96,7 +100,6 @@ header .header-logo {
   background-position: center;
   height: 100vh;
 }
-
 
 /* Welcome Card */
 .welcome-card {
@@ -159,7 +162,7 @@ a:hover, a:focus {
  
 }
 
-/* --- Service Gallery --- */
+/* --- Homepage Galleries --- */
 h6 {
   color: #EFE5D8;
   font-weight: 700;
@@ -168,30 +171,36 @@ h6 {
   text-align: center;
 }
 
-.service-gallery {
+.service-gallery,
+.book-gallery,
+.testimonial-gallery {
   display: flex;
   justify-content: center;
   align-content: space-between;
   flex-flow: row wrap;
-}
-
-.article {
-  flex-basis: 25%;
-}
-
-.service-gallery {
   text-align: center;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 
-/* --- Book Gallery --- */
 .book-gallery {
   background-color: #4D8FBE;
 }
 
-/* --- Testimonial Gallery --- */
+.homepage-images {
+  border: 5px solid #EFE5D8;
+  border-radius: 5px;
+  margin: 10% 7%;
+  width: 18%;
+  overflow: hidden;
+}
 
+.homepage-testimonial {
+  border: 2px solid #EFE5D8;
+  border-radius: 50px;
+  width: 50%;
+  line-height: 1.4em;
+  padding: 5%;
+}
 
 /* ------------------- F O O T E R ------------------- */
 footer {

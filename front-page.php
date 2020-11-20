@@ -52,11 +52,11 @@ get_header(); ?>
 		<?php query_posts('posts_per_page=3&post_type=testimonials'); ?>
 			<?php while ( have_posts() ) : the_post(); 
 					$book_cover = get_field("book_cover"); ?>
-				<article>	
-					<div class="image-border">	
+			
+					<div class="homepage-images">	
 						<?php echo wp_get_attachment_image($book_cover, $size); ?>
 					</div>
-				</article>	
+				
 			<?php endwhile; ?>
 		<?php wp_reset_query(); ?>
 	</div>			
@@ -68,7 +68,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); 
 					$author_info = get_field("author_info"); ?>
 				<article>
-					<div class="testimonial">	
+					<div class="homepage-testimonial">	
 						<?php the_content(); ?>
 						<?php echo $author_info; ?>
 					</div>	
