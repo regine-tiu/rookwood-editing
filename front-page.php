@@ -33,12 +33,14 @@ get_header(); ?>
 					$service_logo = get_field("service_image");
 					$size = "medium"; 
 					$service_summary = get_field("service_summary");?>
-				<article>	
+				<article class="service">	
 					<figure>
 						<?php echo wp_get_attachment_image($service_logo, $size); ?>
 					</figure>
-						<h3><?php the_title(); ?></a></h3>
-						<p><?php echo $service_summary; ?></p>
+						<div class="service-summary">
+							<h6><?php the_title(); ?></a></h6>
+							<p><?php echo $service_summary; ?></p>
+						</div>	
 				</article>	
 			<?php endwhile; ?>
 		<?php wp_reset_query(); ?>
@@ -51,7 +53,9 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); 
 					$book_cover = get_field("book_cover"); ?>
 				<article>	
+					<div class="image-border">	
 						<?php echo wp_get_attachment_image($book_cover, $size); ?>
+					</div>
 				</article>	
 			<?php endwhile; ?>
 		<?php wp_reset_query(); ?>

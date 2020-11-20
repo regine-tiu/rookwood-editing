@@ -160,8 +160,29 @@ a:hover, a:focus {
 }
 
 /* --- Service Gallery --- */
-.homepage-services {
+h6 {
+  color: #EFE5D8;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 15px;
+  text-align: center;
+}
 
+.service-gallery {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-flow: row wrap;
+}
+
+.article {
+  flex-basis: 25%;
+}
+
+.service-gallery {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* --- Book Gallery --- */
@@ -301,8 +322,21 @@ article {
   padding-left: 10%;
 }
 
+.image-border {
+  border: 5px solid #EFE5D8;
+  border-radius: 5px;
+  width: 220px;
+  height: 290px;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
 .testimonial {
-  border: 1px solid #EFE5D8;
+  border: 2px solid #EFE5D8;
   border-radius: 50px;
   width: 50%;
   display: inline-block;

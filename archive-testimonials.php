@@ -24,8 +24,10 @@ get_header(); ?>
             
         <article class="testimonial-item">
           <div class="book-images">
+            <div class="image-border">
               <?php echo wp_get_attachment_image( $image, $size ); ?>
-          </div>
+            </div>
+          </div>  
 
           <aside class="testimonial">
             <?php the_content(); ?>
