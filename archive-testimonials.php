@@ -19,7 +19,8 @@ get_header(); ?>
     <h1 class="testimonials-page">Testimonials</h1>
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("book_cover");
-            $size = "medium"; ?>
+            $size = "medium"; 
+            $author_info = get_field("author_info"); ?>
             
         <article class="testimonial-item">
           <div class="book-images">
@@ -28,6 +29,9 @@ get_header(); ?>
 
           <aside class="testimonial">
             <?php the_content(); ?>
+              <div class="author-info">
+                <?php echo $author_info; ?>
+              </div>  
           </aside>  
         </article>	
       <?php endwhile; // end of the loop. ?>

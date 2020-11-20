@@ -298,8 +298,9 @@ article {
   text-align: center;
 }
 
-.author-style {
-  font-weight: 600;
+.author-info {
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 /* --- testimonials media queries --- */
