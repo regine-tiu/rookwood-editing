@@ -159,6 +159,19 @@ a:hover, a:focus {
  
 }
 
+/* --- Service Gallery --- */
+.homepage-services {
+
+}
+
+/* --- Book Gallery --- */
+.book-gallery {
+  background-color: #4D8FBE;
+}
+
+/* --- Testimonial Gallery --- */
+
+
 /* ------------------- F O O T E R ------------------- */
 footer {
   background-color: #BC742B;
