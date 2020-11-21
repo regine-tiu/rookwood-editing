@@ -26,7 +26,7 @@ get_header(); ?>
         <article class="testimonial-item">
           <div class="book-images">
             <div class="image-border">
-              <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?> </a>
+              <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
             </div>
           </div>  
 

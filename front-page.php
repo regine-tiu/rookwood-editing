@@ -28,7 +28,7 @@ get_header(); ?>
 
 <section class="service-gallery">
 	<div class="row">
-		<?php query_posts('posts_per_page=5&post_type=services'); ?>
+		<?php query_posts('posts_per_page=4&post_type=services'); ?>
 			<?php while ( have_posts() ) : the_post(); 
 					$service_logo = get_field("service_image");
 					$size = "medium"; 
@@ -54,7 +54,7 @@ get_header(); ?>
 					$book_cover = get_field("book_cover"); ?>
 			
 					<div class="homepage-images">	
-						<?php echo wp_get_attachment_image($book_cover, $size); ?>
+						<a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $book_cover, $size ); ?></a>
 					</div>
 				
 			<?php endwhile; ?>
