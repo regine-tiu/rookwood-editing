@@ -67,10 +67,12 @@ get_header(); ?>
 		<?php query_posts('posts_per_page=2&post_type=testimonials'); ?>
 			<?php while ( have_posts() ) : the_post(); 
 					$author_info = get_field("author_info"); ?>
-				<article>
-					<div class="homepage-testimonial">	
-						<?php the_content(); ?>
-						<?php echo $author_info; ?>
+				<article class="testimonial">
+					<div class="homepage-testimonial">
+						<?php the_content(); ?>	
+							<div class="author-info">
+                <?php echo $author_info; ?>
+              </div> 
 					</div>	
 				</article>	
 			<?php endwhile; ?>

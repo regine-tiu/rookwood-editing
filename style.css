@@ -184,13 +184,18 @@ h6 {
   width: 100%;
 }
 
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
 .service-gallery {
   margin: 4% 0;
 }
 
 .service {
   width: 25%;
-  padding-left: 2%;
+  padding: 0 1%;
 }
 
 .book-gallery {
@@ -205,13 +210,31 @@ h6 {
   overflow: hidden;
 }
 
+.testimonial {
+  display: flex;
+  justify-content: center;
+  
+  width: 50%;
+  margin: 5% 0;
+  padding: 3%;
+}
+
 .homepage-testimonial {
   border: 2px solid #EFE5D8;
   border-radius: 50px;
-  width: 50%;
   line-height: 1.4em;
-  padding: 5%;
+  padding: 8%;
+  align-items: center;
 }
+
+
+@media (max-width: 1024px) {
+  .service {
+    width: 50%;
+    padding: 0 4%;
+  }
+}
+
 
 /* ------------------- F O O T E R ------------------- */
 footer {
@@ -350,12 +373,7 @@ article {
   overflow: hidden;
 }
 
-img {
-  height: 100%;
-  max-width: 100%;
-}
-
-.testimonial {
+.testimonial-text {
   border: 2px solid #EFE5D8;
   border-radius: 50px;
   width: 50%;
@@ -376,7 +394,7 @@ img {
     display: none;
   }
 
-  .testimonial {
+  .testimonial-text {
     display: block;
     text-align: center;
     margin-left: 0px;

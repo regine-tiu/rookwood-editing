@@ -30,7 +30,7 @@ get_header(); ?>
             </div>
           </div>  
 
-          <aside class="testimonial">
+          <aside class="testimonial-text">
             <?php the_content(); ?>
               <div class="author-info">
                 <?php echo $author_info; ?>
