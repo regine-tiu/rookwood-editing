@@ -43,6 +43,41 @@ p {
   margin-bottom: 0;
 }
 
+h3 {
+  color: #EFE5D8;
+  font-size: 2em;
+  margin-top: 0px;
+  text-align: center;
+}
+
+h6 {
+  color: #EFE5D8;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+/* --- global styles media queries --- */
+@media (max-width: 768px) {
+  p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+  }
+
+  h6 {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+ p {
+  }
+}
+
+
+
 /* --------------------- H E A D E R -------------------- */
 header {
   background-color: #BC742B;
@@ -68,6 +103,7 @@ header .header-logo {
   font-weight: 600;
 }
 
+/* --- site title media queries --- */
 @media (max-width: 768px) {
   header .header-logo {
     padding-top: 20px;
@@ -223,14 +259,6 @@ a:hover, a:focus {
 
 
 /* --- Homepage Galleries --- */
-h6 {
-  color: #EFE5D8;
-  font-weight: 700;
-  font-size: 1.5em;
-  margin-top: 15px;
-  text-align: center;
-}
-
 .service-gallery,
 .book-gallery,
 .testimonial-gallery {
@@ -247,13 +275,12 @@ img {
   max-width: 100%;
 }
 
-.service-gallery {
-  margin: 4% 0;
-}
 
 .service {
   width: 25%;
   padding: 0 1%;
+  margin-top: 5%;
+  margin-bottom: 7%;
 }
 
 .book-gallery {
@@ -291,13 +318,32 @@ img {
   .service {
     width: 50%;
     padding: 0 4%;
+    margin: 4% 0;
   }
+
+  .service-gallery {
+    margin-top: 5%;
+    margin-bottom: 7%;
+  }
+
+  .homepage-testimonial {
+    border: 1.5px solid #EFE5D8;
+  }
+
 }
 
 @media (max-width: 768px) {
   .service {
-    width: 50%;
-    padding: 0 4%;
+    width: 48%;
+    padding: 0 6%;
+  }
+
+  .homepage-images {
+    border: 3px solid #EFE5D8;
+    border-radius: 5px;
+    margin: 8% 7%;
+    width: 17%;
+    overflow: hidden;
   }
 
   .testimonial {
@@ -354,15 +400,27 @@ footer p a {
   color: #EFE5D8;
 }
 
+/* --- footer styles media queries --- */
+@media (max-width: 768px) {
+  .social-icons ul li {
+    padding-right: 35px;
+    margin-top: 35px; 
+  }
+  
+  .social-icons img {
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+ p {
+  }
+}
+
 
 /* ------------------- P A G E S ------------------- */
 /* --- ABOUT --- */
-h3 {
-  color: #EFE5D8;
-  font-size: 2em;
-  margin-top: 0px;
-  text-align: center;
-}
+
 
 .about-page-text {
   display: inline-block;
@@ -391,14 +449,11 @@ h3 {
   text-align: center;
 }
 
-article {
-  margin-bottom: 60px;
-}
-
 .service-item {
   display: flex;
   justify-content: center;
   justify-items: center;
+  margin-bottom: 60px;
 }
 
 .service-item-images {
@@ -487,6 +542,10 @@ article {
     width: 100%;
     padding: 0;
   }
+
+  .author-info {
+    font-size: 0.9em;
+  }  
 }
 
 
