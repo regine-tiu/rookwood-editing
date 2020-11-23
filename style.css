@@ -113,7 +113,7 @@ header .header-logo {
 
 @media (max-width: 480px) {
   header .header-logo {
-    width: 50%;
+    width: 65%;
   }
 }
 
@@ -340,10 +340,6 @@ img {
 
   .homepage-images {
     border: 3px solid #EFE5D8;
-    border-radius: 5px;
-    margin: 8% 7%;
-    width: 17%;
-    overflow: hidden;
   }
 
   .testimonial {
@@ -358,13 +354,39 @@ img {
   .testimonial-gallery {
     margin: 3% 0;
   }
-
 }
 
 @media (max-width: 480px) {
   .service {
-    width: 100%;
+    width: 90%;
     padding: 0 4%;
+  }
+
+  .service figure {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .book-gallery {
+    padding: 10% 0;;
+  }
+
+  .testimonial{
+    margin: 3% 0;
+  }
+
+  .testimonial-gallery {
+    padding: 5% 0;
+  }
+
+  .homepage-images {
+    border: 3px solid #EFE5D8;
+    width: 50%;
+  }
+
+  .homepage-testimonial {
+    border: .5px solid #EFE5D8;
+    border-radius: 40px;
   }
 }
 
@@ -413,8 +435,10 @@ footer p a {
 }
 
 @media (max-width: 480px) {
- p {
+  .social-icons ul li {
+    padding: 0 15px;
   }
+
 }
 
 
