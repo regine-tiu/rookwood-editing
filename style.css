@@ -472,11 +472,6 @@ footer p a {
   margin-bottom: 80px;
 }
 
-.service-item:nth-child(even) {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .service-item-images {
   width: 40%;
   display: inline-block;
@@ -489,6 +484,11 @@ footer p a {
   padding-right: 6%;
 }
 
+.service-item:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .service-item-image:nth-child(even) {
   padding-left: 0%;
 }
@@ -497,8 +497,6 @@ footer p a {
   width: 50%;
   padding-right: 0%;
 }
-
-
 
 .tab-space {
   padding-left: 50px;
@@ -525,21 +523,21 @@ footer p a {
 }
 
 /* --- TESTIMONIALS --- */
+.testimonial-row {
+  margin-bottom: 50px;
+}
 
 .testimonial-item {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.testimonial-row {
-  margin-bottom: 50px;
+  margin: 20px 0 30px 0;
 }
 
 .book-images {
-  width: 39%;
+  width: 35%;
   display: inline-block;
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .image-border {
@@ -550,10 +548,6 @@ footer p a {
   overflow: hidden;
 }
 
-.testimonial-item {
-  margin: 20px 0 30px 0;
-}
-
 .testimonial-text {
   border: 2px solid #EFE5D8;
   border-radius: 50px;
@@ -562,11 +556,21 @@ footer p a {
   line-height: 1.4em;
   padding: 5%;
   text-align: center;
+  margin: 4%;
 }
 
 .author-info {
   margin-top: 10px;
   font-weight: 500;
+}
+
+.testimonial-item:nth-child(even){
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.testimonial-text:nth-child(even){
+  margin-left: 6%;
 }
 
 /* --- testimonials media queries --- */

@@ -17,12 +17,12 @@ get_header(); ?>
 <section class="page">
 	<div class="row">
     <h1>Testimonials</h1>
+    <div class="testimonial-row"> 
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("book_cover");
             $size = "medium"; 
             $author_info = get_field("author_info"); 
-            $book_link = get_field("book_link"); ?>
-        <div class="testimonial-row">  
+            $book_link = get_field("book_link"); ?> 
           <article class="testimonial-item">
             <div class="book-images">
               <div class="image-border">
@@ -30,13 +30,13 @@ get_header(); ?>
               </div>
             </div>  
 
-          <aside class="testimonial-text">
-            <?php the_content(); ?>
+            <div class="testimonial-text">
+              <?php the_content(); ?>
               <div class="author-info">
                 <?php echo $author_info; ?>
               </div>  
-          </aside>  
-        </article>	
+            </div>  
+          </article>	
         <?php endwhile; // end of the loop. ?>
       </div> 
 	</div>
