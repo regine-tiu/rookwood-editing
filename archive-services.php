@@ -23,11 +23,12 @@ get_header(); ?>
         <?php echo $intro ; ?> 
     </div>
 
+    <div class="service-row">
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("service_image");
             $size = "medium"; ?>
             
-        <article class="services-item">
+        <article class="service-item">
           <div class="service-item-images">
               <?php echo wp_get_attachment_image( $image, $size ); ?>
           </div>
@@ -39,6 +40,7 @@ get_header(); ?>
           </aside>  
         </article>	
       <?php endwhile; // end of the loop. ?>
+    </div>  
 	</div>
 </section>
 

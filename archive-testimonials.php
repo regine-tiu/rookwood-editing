@@ -16,19 +16,19 @@ get_header(); ?>
 
 <section class="page">
 	<div class="row">
-    <h1 class="testimonials-page">Testimonials</h1>
+    <h1>Testimonials</h1>
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("book_cover");
             $size = "medium"; 
             $author_info = get_field("author_info"); 
             $book_link = get_field("book_link"); ?>
-            
-        <article class="testimonial-item">
-          <div class="book-images">
-            <div class="image-border">
-              <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
-            </div>
-          </div>  
+        <div class="testimonial-row">  
+          <article class="testimonial-item">
+            <div class="book-images">
+              <div class="image-border">
+                <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
+              </div>
+            </div>  
 
           <aside class="testimonial-text">
             <?php the_content(); ?>
@@ -37,7 +37,8 @@ get_header(); ?>
               </div>  
           </aside>  
         </article>	
-      <?php endwhile; // end of the loop. ?>
+        <?php endwhile; // end of the loop. ?>
+      </div> 
 	</div>
 </section>
 

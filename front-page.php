@@ -56,7 +56,7 @@ get_header(); ?>
 					<div class="homepage-images">	
 						<a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $book_cover, $size ); ?></a>
 					</div>
-				
+					
 			<?php endwhile; ?>
 		<?php wp_reset_query(); ?>
 	</div>			
