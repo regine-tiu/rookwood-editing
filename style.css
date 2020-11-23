@@ -218,10 +218,7 @@ a:hover, a:focus {
 @media (max-width: 768px) {
   .welcome-card {
     padding: 30px 35px 25px 35px;
-    position: absolute;
-    top: 15%;
-    left: 7%;
-    width: 45%;
+    width: 55%;
   }
 
   h2 {
@@ -249,13 +246,16 @@ a:hover, a:focus {
 }
 
 @media (max-width: 480px) {
-  header .header-logo {
-    width: 50%;
+  .welcome-card {
+    padding: 30px 30px 25px 30px;
+    width: 60%;
   }
+  h2 {
+    font-size: 2.1em;
+    line-height: 1.2em;
+  }
+  
 }
-
-
-
 
 
 /* --- Homepage Galleries --- */
@@ -374,13 +374,14 @@ footer {
   margin-bottom: -50px;
 }
 
-.social-icons ul{
+.social-icons {
+  width: 100%;
   text-align: center;
 }
 
 .social-icons ul li {
   display: inline-block;
-  padding-right: 40px;
+  padding: 0 20px;
   margin-top: 40px; 
 }
 
@@ -403,7 +404,6 @@ footer p a {
 /* --- footer styles media queries --- */
 @media (max-width: 768px) {
   .social-icons ul li {
-    padding-right: 35px;
     margin-top: 35px; 
   }
   
