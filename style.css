@@ -68,6 +68,20 @@ header .header-logo {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  header .header-logo {
+    padding-top: 20px;
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  header .header-logo {
+    width: 50%;
+  }
+}
+
+
 /* Nav Menu */
 .hfg_header.site-header {
   box-shadow: none;
@@ -113,7 +127,6 @@ header .header-logo {
   top: 15%;
   left: 7%;
   width: 45%;
-  flex-basis: fit-content;
 }
 
 h2 {
@@ -134,9 +147,9 @@ h4 {
 
 h5 {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 0.9em;
   text-align: center;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .welcome-btn a:link,
@@ -163,6 +176,51 @@ a:hover, a:focus {
   text-decoration: none;
  
 }
+
+/* --- welcome card media queries --- */
+
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 30px 35px 25px 35px;
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    width: 45%;
+  }
+
+  h2 {
+    font-size: 2.7em;
+    line-height: 1.2em;
+  }
+  
+  h4 {
+    color:#404248;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .welcome-btn a:link,
+  .welcome-btn a:visited {
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .header-logo {
+    width: 50%;
+  }
+}
+
+
+
+
 
 /* --- Homepage Galleries --- */
 h6 {
@@ -213,7 +271,6 @@ img {
 .testimonial {
   display: flex;
   justify-content: center;
-  
   width: 50%;
   margin: 5% 0;
   padding: 3%;
@@ -228,6 +285,8 @@ img {
 }
 
 
+/* --- homepage testimonial media queries --- */
+
 @media (max-width: 1024px) {
   .service {
     width: 50%;
@@ -235,6 +294,33 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .service {
+    width: 50%;
+    padding: 0 4%;
+  }
+
+  .testimonial {
+    width: 100%;
+    margin: 1% 0%
+  }
+
+  .homepage-testimonial {
+    border: 1px solid #EFE5D8;
+  }
+
+  .testimonial-gallery {
+    margin: 3% 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .service {
+    width: 100%;
+    padding: 0 4%;
+  }
+}
 
 /* ------------------- F O O T E R ------------------- */
 footer {
