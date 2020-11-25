@@ -683,7 +683,9 @@ h2.comments-title{
   font-size: 1.3em;
 }
 
-
+.blog-sidebar p {
+  text-align: center;
+}
 
 .post p {
   font-family: 'Garamond';
