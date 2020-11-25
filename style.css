@@ -642,8 +642,9 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
   margin: 50px 0;
 }
 
-.content h2 {
-  font-size: 2.5em;
+.content h2{
+  font-family: 'Playfair';
+  font-size: 3em;
   font-weight: 800;
 }
 
@@ -682,12 +683,7 @@ h2.comments-title{
   font-size: 1.3em;
 }
 
-.post h2 {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.5em;
-  margin: 20px 0;
-}
+
 
 .post p {
   font-family: 'Garamond';
@@ -695,6 +691,13 @@ h2.comments-title{
   line-height: 1.5em;
   margin-bottom: 15px;
   font-weight: 500;
+}
+
+.entry-content h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 20px 0 10px 0;
 }
 
 h3.comment-reply-title  {
