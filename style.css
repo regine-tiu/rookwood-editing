@@ -642,9 +642,20 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
 }
 
 .content h2 {
-  font-size: 3em;
+  font-size: 2.5em;
+  font-weight: 800;
 }
 
-.entry-title a {
-  color: #fff;
+.entry-title a:hover {
+  color: #EFE5D8;
 }
+
+a {
+  color:;
+}
+
+a:hover {
+  transition: 0.2s;
+  color:#EFE5D8;
+}
+
