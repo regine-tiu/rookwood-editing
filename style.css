@@ -628,13 +628,14 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
 }
 
 /* BLOG */
-
+/* ---- Blog Archive ---- */
 .archive-container .row {
   width: 100%;
 }
 
 .blog-row {
-  width: 85%;
+  margin-left: 2%;
+  width: 88%;
 }
  
 .post {
@@ -651,7 +652,7 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
 }
 
 a {
-  color:;
+  color:#404248;
 }
 
 a:hover {
@@ -659,3 +660,43 @@ a:hover {
   color:#EFE5D8;
 }
 
+
+/* ---- Single Blog Post ---- */
+.nv-title-meta-wrap h1{
+  color:#fff;
+  font-size: 3.5em;
+  font-weight: 800;
+}
+
+.single-post-container .row {
+  width: 100%;
+}
+
+.nv-content-wrap .entry-content {
+  margin: 20px;
+}
+
+h2.comments-title{
+  color: #404248;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.post h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.post p {
+  font-family: 'Garamond';
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+h3.comment-reply-title  {
+  color: #fff;
+}
