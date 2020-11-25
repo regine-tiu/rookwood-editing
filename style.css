@@ -627,3 +627,24 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
   padding: 10px 30px;
 }
 
+/* BLOG */
+
+.archive-container .row {
+  width: 100%;
+}
+
+.blog-row {
+  width: 85%;
+}
+ 
+.post {
+  margin: 50px 0;
+}
+
+.content h2 {
+  font-size: 3em;
+}
+
+.entry-title a {
+  color: #fff;
+}
