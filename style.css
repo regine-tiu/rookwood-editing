@@ -156,7 +156,16 @@ header .header-logo {
   color:#68A4D0;
 } 
 
+/*------- navbar media queries -----*/ 
+@media (max-width: 1024px) {
+  .nav-list li {
+    padding: 0 5px 20px 5px;
+  }
 
+  .nav-list li a {
+    font-size: 0.9em;
+  }
+}
 
 /* Hero Img */
 .hero {
