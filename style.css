@@ -132,14 +132,30 @@ header .header-logo {
   margin-top: 0;;
 }
 
-.nav-ul li {
-  padding-top: 0;
-  padding-bottom: 20px;
+.nav-list{
+  display: flex;
+  flex-wrap: row;
+  justify-content: center;
+  align-content: space-between;
 }
 
-.nv-nav-wrap ul li{
+.nav-list li {
+  padding: 0 10px 20px 10px;
+  font-weight: 500;
+}
+
+.nav-list li a{
   color: #EFE5D8;
 }
+
+.nav-list li a:active{
+  color: #fff;
+}
+
+.nav-list li a:hover{
+  color:#68A4D0;
+} 
+
 
 
 /* Hero Img */
@@ -300,6 +316,7 @@ img {
 }
 
 .homepage-testimonial {
+  border: 2px solid #EFE5D8;
   border-radius: 50px;
   line-height: 1.4em;
   padding: 8%;
@@ -550,6 +567,10 @@ footer p a {
 }
 
 @media (max-width: 480px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
   h3 {
     font-size: 1.5em; 
   }
