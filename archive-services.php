@@ -24,6 +24,7 @@ get_header(); ?>
     </div>
 
     <div class="service-row">
+    <?php query_posts('posts_per_page=4&post_type=services'); ?>
 		  <?php while ( have_posts() ) : the_post(); 
       			$image = get_field("service_image");
             $size = "medium"; ?>
