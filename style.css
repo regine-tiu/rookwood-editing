@@ -464,6 +464,7 @@ footer p a {
 }
 .service-item {
   display: flex;
+  flex-wrap: row;
   margin-bottom: 80px;
   align-items: center;
 }
@@ -512,28 +513,34 @@ footer p a {
   .service-item {
     margin-bottom: 60px;
   }
-
-
 } 
 
-
 @media (max-width: 768px) {
+  .service-item:nth-child(even) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
   .service-item-images {
     display: block;
-    margin: 0 20%;
-    padding-top: 0;
-    padding-left: 10px;
+    margin: 2% 20%;
+    width: 50%;
+  }
+
+  .service-item-text {
+    padding-right: 0;
     text-align: center;
-    width: 60%;
     
   }
-  .service-item-text {
-    display: block;
-    text-align: center;
-    margin-left: 0px;
+
+  .service-item {
     width: 100%;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
   }
+  
 }
 
 /* --- TESTIMONIALS --- */
