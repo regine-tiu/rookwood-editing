@@ -33,11 +33,11 @@ get_header(); ?>
               <?php echo wp_get_attachment_image( $image, $size ); ?>
           </div>
 
-          <aside class="service-item-text">
+          <div class="service-item-text">
             <h3><?php the_title(); ?></h3>
             
             <?php the_content(); ?>
-          </aside>  
+          </div>  
         </article>	
       <?php endwhile; // end of the loop. ?>
     </div>  
