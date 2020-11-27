@@ -35,7 +35,7 @@ get_header(); ?>
 					$service_summary = get_field("service_summary");?>
 				<article class="service">	
 					<figure>
-						<?php echo wp_get_attachment_image($service_logo, $size); ?>
+						<a href="<?php echo site_url('/service')?>"><?php echo wp_get_attachment_image($service_logo, $size); ?></a>
 					</figure>
 						<div class="service-summary">
 							<h6><?php the_title(); ?></a></h6>
@@ -69,7 +69,7 @@ get_header(); ?>
 					$author_info = get_field("author_info"); ?>
 				<article class="testimonial">
 					<div class="homepage-testimonial">
-						<?php the_content(); ?>	
+						<a href="<?php echo site_url('/testimonial')?>"><?php the_content(); ?></a>	
 							<div class="author-info">
                 <?php echo $author_info; ?>
               </div> 

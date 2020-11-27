@@ -332,6 +332,14 @@ img {
   align-items: center;
 }
 
+.homepage-testimonial a {
+  color: #fff;
+}
+
+.homepage-testimonial a:hover {
+  color: #fff;
+}
+
 /* --- homepage testimonial media queries --- */
 
 @media (max-width: 1024px) {
