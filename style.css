@@ -494,10 +494,22 @@ footer p a {
 }
 
 /* --- about media queries --- */
-.about-summary {
-  padding: 0% 8%;
-  margin-top: -40%;
+@media (max-width: 1024px) {
+  .about-summary {
+  margin-top: -110%;
+  }
 }
+
+@media (max-width: 768px) {
+  .about-page-sidebar {
+    display: none;
+  }
+
+  .about-page-text {
+    width: 100%;
+    text-align: center;
+    padding: 0 5%;
+  }
 
 
 /* --- SERVICES --- */
@@ -581,7 +593,7 @@ footer p a {
   }
 
   .service-item-text {
-    padding-right: 0;
+    padding-right: 0%;
     text-align: center;
   }
 
