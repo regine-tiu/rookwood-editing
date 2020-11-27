@@ -31,7 +31,7 @@ get_header(); ?>
             </div>  
 
             <div class="testimonial-text">
-              <?php echo $book_link; ?>" target="_blank"><?php the_content(); ?>
+              <?php the_content(); ?>
               <div class="author-info">
                 <?php echo $author_info; ?>
               </div>  

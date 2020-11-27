@@ -702,6 +702,10 @@ div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-contain
   margin-left: 2%;
   width: 88%;
 }
+
+.nv-index-posts {
+  width: 70%;
+}
  
 .post {
   margin: 50px 0;
