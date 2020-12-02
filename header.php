@@ -17,6 +17,10 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
