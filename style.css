@@ -275,10 +275,36 @@ a:hover, a:focus {
     padding: 30px 30px 25px 30px;
     width: 60%;
   }
+  
   h2 {
     font-size: 2.1em;
     line-height: 1.2em;
   }
+}
+
+ @media (max-width: 400px) {
+  .welcome-card {
+    padding: 30px 25px 15px 25px;
+    width: 60%;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+  
+  h4 {
+    font-size: 0.9em;
+  }
+  
+  h5 {
+    font-size: 0.8em;
+  }
+  .welcome-btn a:link,
+  .welcome-btn a:visited {
+    padding: 8px 30px;
+  }
+  
 }
 
 /* --- Homepage Galleries --- */
@@ -416,7 +442,7 @@ img {
 /* ------------------- F O O T E R ------------------- */
 footer {
   background-color: #BC742B;
-  margin-bottom: -50px;
+/*   margin-bottom: -50px; */
 }
 
 .social-icons {
@@ -479,8 +505,10 @@ footer p a {
 }
 
 .about-summary {
-  padding: 0% 8%;
-  margin-top: -45%;
+    border: 1.5px solid #EFE5D8;
+    border-radius: 40px;
+    padding: 8% 10%;
+    margin-top: -40%;
 }
 
 .about-summary-list {
@@ -490,6 +518,12 @@ footer p a {
 }
 
 /* --- about media queries --- */
+@media (min-width: 1300px) {
+  .about-summary {
+  margin-top: -10%;
+  }
+}
+
 @media (max-width: 1024px) {
   .about-summary {
   margin-top: -110%;
@@ -707,9 +741,6 @@ footer p a {
     }  
 }
 
-
-
-
 /* CONTACT PAGE */
 .contact-form {
 margin: 0 0 6% 5%;
@@ -763,6 +794,13 @@ a:hover {
   color:#EFE5D8;
 }
 
+/* --- testimonials media queries --- */
+@media (max-width: 960px) {
+  .widget_media_image,
+  .widget_text {
+    display: none;
+  } 
+}
 
 /* ---- Single Blog Post ---- */
 .nv-title-meta-wrap h1{
@@ -798,12 +836,32 @@ h2.comments-title{
 }
 
 .entry-content h2 {
-  color: #fff;
+  color: #EFE5D8;
   font-weight: 600;
-  font-size: 1.5em;
-  margin: 20px 0 10px 0;
+  font-size: 1.7em;
+  line-height: 120%;
+  margin: 40px 0 15px
 }
 
-h3.comment-reply-title  {
-  color: #fff;
+.comment-reply-title {
+    color:#EFE5D8;
+}
+
+/* --- single blog post media queries --- */
+@media (max-width: 1024px) {
+  .nv-title-meta-wrap h1{
+  font-size: 3.0em;
+  line-height: 140%;
+  } 
+}
+
+@media (max-width: 480px) {
+  .nv-title-meta-wrap h1{
+  font-size: 2.3em;
+  font-weight: 800;
+  } 
+  
+  .entry-content h2 {
+  font-size: 1.5em;
+    }
 }
