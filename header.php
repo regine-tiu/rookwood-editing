@@ -15,15 +15,13 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+	<meta property="og:description" content="I believe that, at its heart, editing is about collaboration. My job is to help you, the author, clarify your vision of your project and bring your words to life" />
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="manifest" href="/site.webmanifest">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -33,16 +31,16 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<?php neve_before_header_wrapper_trigger(); ?>
 	<header class="<?php echo esc_attr( $header_classes ); ?>" role="banner">
 	<div class="header-logo">
-			<img src="http://localhost:8888/wordpress/wp-content/uploads/2020/11/header-logo.png">
+			<a href="https://www.rookwoodediting.com"><img src="https://www.rookwoodediting.com/wp-content/uploads/2020/12/header-logo.png"></a>
 		</div>
 	
 		<div class="nav-bar">
 			<ul class="nav-list">
 				<li><a class="nav-item" href="<?php echo site_url('')?>">Home</a></li>
 				<li><a class="nav-item" href="<?php echo site_url('/about')?>">About</a></li>
-				<li><a class="nav-item" href="<?php echo site_url('/service')?>">Services</a></li>
-				<li><a class="nav-item" href="<?php echo site_url('/testimonial')?>">Testimonials</a></li>
-				<li><a class="nav-item" href="<?php echo site_url('/contact-2')?>">Contact</a></li>
+				<li><a class="nav-item" href="<?php echo site_url('/services')?>">Services</a></li>
+				<li><a class="nav-item" href="<?php echo site_url('/testimonials')?>">Testimonials</a></li>
+				<li><a class="nav-item" href="<?php echo site_url('/contact')?>">Contact</a></li>
 				<li><a class="nav-item" href="<?php echo site_url('blog')?>">Blog</a></li>
 			</ul>	
 		</div>
