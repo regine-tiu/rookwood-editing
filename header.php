@@ -44,7 +44,6 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 				<li><a class="nav-item" href="<?php echo site_url('blog')?>">Blog</a></li>
 			</ul>	
 		</div>
-
 	</header>
 <?php
 
