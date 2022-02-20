@@ -35,7 +35,7 @@ get_header(); ?>
           </div> 
 
           <div class="about-summary">
-            <?php	echo $about_summary;?>	
+            <?php echo $about_summary;?>	
           </div>
       </div>
       <?php endwhile; // end of the loop. ?>

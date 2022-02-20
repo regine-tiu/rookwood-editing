@@ -8,7 +8,7 @@ if ( ! function_exists( 'neve_child_load_css' ) ):
 	 * Load CSS file.
 	 */
 	function neve_child_load_css() {
-		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'neve-style' ), NEVE_VERSION );
+		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . './stylesheets/style.css', array( 'neve-style' ), NEVE_VERSION );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
@@ -41,7 +41,7 @@ function create_custom_post_types_2() {
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array( 'slug' => 'service' ),
+      'rewrite' => array( 'slug' => 'services' ),
       )
     );
 }
@@ -56,7 +56,7 @@ function create_custom_post_types_3() {
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array( 'slug' => 'testimonial' ),
+      'rewrite' => array( 'slug' => 'testimonials' ),
       )
     );
 }
@@ -66,3 +66,13 @@ function create_custom_post_types_3() {
 add_action( 'init', 'create_custom_post_types_1' );
 add_action( 'init', 'create_custom_post_types_2' );
 add_action( 'init', 'create_custom_post_types_3' );
+
+
+// Remove 'Archive' from Site Title //
+function prefix_category_title( $title ) {
+  if(is_archive('slug-of-your-custom-post-type')){
+    $title = single_cat_title( '', false );
+  }
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_category_title' );
