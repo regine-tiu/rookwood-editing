@@ -1,7 +1,7 @@
 body, html {
-  background-color: white;
+  background-color: #4D8FBE;
   color: #fff;
-  font-family: "ABeeZee", "Open Sans", sans-serif;
+  font-family: azo-sans-web, "Open Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.6em;
+  font-size: 3.5em;
   font-style: italic;
   font-weight: 900;
   margin: 0.5em 0;
@@ -25,7 +25,7 @@ h1 {
 
 p {
   margin-bottom: 0;
-  font-size: 0.9em;
+  font-size: 0.95em;
   line-height: 1.5em;
 }
 
@@ -441,6 +441,13 @@ footer p a {
   width: 35%;
   display: inline-block;
   padding: 0 3%;
+}
+
+.about-summary {
+  /*     border: 1.5px solid #efe5d8; 
+  * *border-radius: 40px;
+  * *padding: 8% 10%;
+  * *margin-top: -40%; */
 }
 
 .about-summary-list {
