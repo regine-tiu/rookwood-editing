@@ -21,6 +21,7 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<?php endif; ?>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="https://use.typekit.net/sku3vdx.css">
 
 	<?php wp_head(); ?>
 </head>

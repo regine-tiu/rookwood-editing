@@ -1,5 +1,5 @@
 body, html {
-  background-color: #4D8FBE;
+  background-color: white;
   color: #fff;
   font-family: "ABeeZee", "Open Sans", sans-serif;
 }
@@ -441,13 +441,6 @@ footer p a {
   width: 35%;
   display: inline-block;
   padding: 0 3%;
-}
-
-.about-summary {
-  /*     border: 1.5px solid #efe5d8; 
-  * *border-radius: 40px;
-  * *padding: 8% 10%;
-  * *margin-top: -40%; */
 }
 
 .about-summary-list {
