@@ -54,7 +54,7 @@ get_header(); ?>
 					$book_cover = get_field("book_cover");
 					$book_link = get_field("book_link"); ?>
 			
-					<div class="homepage-images">	
+					<div class="gallery-imgs">	
 						<a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $book_cover, $size ); ?></a>
 					</div>
 					
