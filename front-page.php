@@ -17,10 +17,12 @@ get_header(); ?>
 <section class="hero">
 	<div class="hero-img">	
 	</div>
-	<div class="welcome-card">
+	<div class="hero-card">
 		<h2>Welcome to <br> Rookwood Editing.</h2>
-		<h4>Let’s work together to enhance your authorial vision and make your writing shine.</h4>
-		<div class="welcome-btn">
+		<div class="hero-text">
+			<h4>Let’s work together to enhance your authorial vision and make your writing shine.</h4>
+		</div>
+		<div class="hero-btn">
 			<h5><a href="<?php echo site_url('/contact')?>">Get in touch</a></h5>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 // Colors
 $background-blue: #4081B0 //#4D8FBE
 $header-color: #F7F2ED
-$dark-grey: #404248
+$dark-grey: #242525
 $accent-green: #509082
 $main-brown: #BC742B
 $white: #fff
@@ -10,20 +10,27 @@ $white: #fff
 $p-font: azo-sans-web, open sans, sans-serif
 $header-font: playfair-display, serif
 
-    
+// Min width breakpoints
+$bkpt-min-sm: 576px // landscape phones, 576px and up
+$bkpt-min-md: 768px // tablets, 768px and up
+$bkpt-min-lg: 992px // desktops, 992px and up
+$bkpt-min-xl: 1200px // large desktops, 1200px and up
+$bkpt-min-xxl: 1400px // larger desktops, 1400px and up
+$bkpt-min-xxxl: 1650px // xtra larger desktops, 1650px and up
+
+
 // Global Styles
 a:hover, a:focus
   text-decoration: none
 
 body, html
   background-color: $background-blue
-  color: #fff
+  color: $white
   font-family: $p-font
 
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
-
-
+  margin: 0
 
 h1
   font-size: 3.5em
@@ -34,9 +41,7 @@ h1
   justify-content: flex-start
 
 .row
-  justify-content: center
-  margin: 0 auto
-  width: 85%
+  padding: 0 10%
 
 p
   margin-bottom: 0
@@ -44,7 +49,7 @@ p
   line-height: 1.5em
 
 h3
-  color: #EFE5D8
+  color: $header-color
   font-size: 2em
   margin-top: 0px
   text-align: center
@@ -99,12 +104,7 @@ header
     width: 80%
 
 /* Nav Menu
-
-.hfg_header
-  // &.site-header
-  //   box-shadow: none
-
-  .header-top-inner
+.header-top-inner
     background-color: $main-brown
 
 .builder-item
@@ -123,7 +123,7 @@ header
         font-weight: 500
 
     a
-      color: #EFE5D8
+      color: $header-color
 
       &:hover
         color: $white
@@ -150,15 +150,18 @@ header
 
 /* Welcome Card
 
-.welcome-card
-  background-color: #fff
+.hero-card
+  background-color: $header-color
   display: flex
   flex-direction: column
-  padding: 5%
+  padding: 4%
   position: absolute
   top: 15%
-  left: 7%
+  left: 10%
   max-width: 500px
+
+.hero-text
+  padding: 3% 0
 
 h2
   color: $main-brown
@@ -168,8 +171,7 @@ h2
 
 h4
   color: #404248
-  margin-top: 20px
-  margin-bottom: 10px
+  margin: 20px 0
   font-weight: 600
   text-align: center
   line-height: 1.3em
@@ -178,17 +180,15 @@ h5
   font-weight: 700
   font-size: 1.1em
   text-align: center
-  margin-top: 25px
 
-.welcome-btn a
-  &:link, &:visited
-    color: $accent-green
-    padding: 10px 50px
-    border: 1.5px solid $accent-green
-    border-radius: 30px
+.hero-btn a
+  color: $accent-green
+  padding: 10px 50px
+  border: 1.5px solid $accent-green
+  border-radius: 30px
 
   &:hover, &:active
-    color: #fff
+    color: $white
     border: 2px transparent $accent-green
     background-color: $accent-green
     transition: 0.2s
@@ -273,7 +273,6 @@ img
   margin: 0 6%
   width: 20%
 
-
 .testimonial
   display: flex
   justify-content: center
@@ -289,10 +288,10 @@ img
   align-items: center
 
   a
-    color: #fff
+    color: $white
 
     &:hover
-      color: #fff
+      color: $white
 
 /* --- homepage testimonial media queries ---
 
@@ -343,11 +342,11 @@ img
     padding: 5% 0
 
   .homepage-images
-    border: 3px solid #EFE5D8
+    border: 3px solid $header-color
     width: 50%
 
   .homepage-testimonial
-    border: .5px solid #EFE5D8
+    border: .5px solid $header-color
     border-radius: 40px
 
 /* ------------------- F O O T E R -------------------
@@ -370,12 +369,15 @@ footer
 
 footer p
   text-align: center
-  color: #EFE5D8
+  color: $header-color
   padding: 20px 0
 
   a
     font-weight: 500
-    color: #EFE5D8
+    color: $header-color
+
+    &:hover
+      color: $white
 
 /* --- footer styles media queries ---
 @media (max-width: 768px)
@@ -395,20 +397,19 @@ footer p
 
 .about-page-text
   display: inline-block
-  width: 64%
-  padding-right: 3%
-  margin-bottom: 7%
-
+  width: 65%
+  padding: 0 3% 5% 3%
+ 
 .about-page-sidebar
   width: 35%
   display: inline-block
   padding: 0 3%
 
 .about-summary-list
-  color: #fff
+  color: $white
   font-size: 0.9em
   line-height: 2em
-  border: 1px solid #fff
+  border: 1px solid $white
   display: block
   border-radius: 40px
   padding: 8% 10%
@@ -540,14 +541,14 @@ footer p
   padding-left: 8%
 
 .image-border
-  border: 4px solid #EFE5D8
+  border: 4px solid $header-color
   border-radius: 5px
   width: 220px
   height: 290px
   overflow: hidden
 
 .testimonial-text
-  border: 2px solid #EFE5D8
+  border: 2px solid $header-color
   border-radius: 50px
   width: 50%
   display: inline-block
@@ -560,6 +561,7 @@ footer p
   margin-top: 10px
   font-weight: 500
   font-size: 0.9em
+  color: $dark-grey
 
 .testimonial-item:nth-child(even)
   display: flex
@@ -571,7 +573,7 @@ footer p
 /* --- testimonials media queries ---
 @media (max-width: 1024px)
   .image-border
-    border: 3px solid #EFE5D8
+    border: 3px solid $header-color
 
   .book-images:nth-child(odd)
     padding-left: 6%
@@ -593,15 +595,16 @@ footer p
 /* CONTACT PAGE
 
 .contact-form
-  margin: 0 0 6% 5%
-  color: #404248
+  padding: 0 8%
+  color: $header-color
+  font: $p-font
 
 div.wpforms-container-full .wpforms-form
   input[type=submit], button[type=submit], .wpforms-page-button
     border-radius: 20px
     border: none
     background-color: $accent-green
-    color: #fff
+    color: $white
     margin-top: 15px
     padding: 10px 30px
 
@@ -627,14 +630,14 @@ div.wpforms-container-full .wpforms-form
   font-weight: 800
 
 .entry-title a:hover
-  color: #EFE5D8
+  color: $header-color
 
 a
   color: #404248
 
   &:hover
     transition: 0.2s
-    color: #EFE5D8
+    color: $header-color
 
 /* --- testimonials media queries ---
 @media (max-width: 960px)
@@ -644,7 +647,7 @@ a
 /* ---- Single Blog Post ----
 
 .nv-title-meta-wrap h1
-  color: #fff
+  color: $white
   font-size: 3.5em
   font-weight: 800
 
@@ -670,14 +673,14 @@ h2.comments-title
   font-weight: 500
 
 .entry-content h2
-  color: #EFE5D8
+  color: $header-color
   font-weight: 600
   font-size: 1.7em
   line-height: 120%
   margin: 40px 0 15px
 
 .comment-reply-title
-  color: #EFE5D8
+  color: $header-color
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
