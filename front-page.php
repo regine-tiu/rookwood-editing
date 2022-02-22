@@ -74,8 +74,8 @@ get_header(); ?>
 					<div class="homepage-testimonial">
 						<a href="<?php echo site_url('/testimonials')?>"><?php the_content(); ?></a>	
 							<div class="author-info">
-                <?php echo $author_info; ?>
-              </div> 
+               					<?php echo $author_info; ?>
+              				</div> 
 					</div>	
 				</article>	
 			<?php endwhile; ?>

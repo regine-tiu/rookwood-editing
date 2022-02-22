@@ -24,12 +24,9 @@ get_header(); ?>
             $author_info = get_field("author_info"); 
             $book_link = get_field("book_link"); ?> 
           <article class="testimonial-item">
-            <div class="book-images">
-              <div class="image-border">
-                <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
-              </div>
-            </div>  
-
+            <div class="book-imgs">
+              <a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $image, $size ); ?></a>
+            </div>          
             <div class="testimonial-text">
               <?php the_content(); ?>
               <div class="author-info">
