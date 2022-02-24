@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template for displaying case studies
@@ -38,8 +37,7 @@ get_header(); ?>
             <?php echo $about_summary;?>	
           </div>
       </div>
-      <?php endwhile; // end of the loop. ?>
-          
+      <?php endwhile; // end of the loop. ?>     
 	</div>
 </section>
 
