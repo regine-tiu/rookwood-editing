@@ -11,13 +11,12 @@ $p-font: azo-sans-web, open sans, sans-serif
 $header-font: playfair-display, serif
 
 // Min width breakpoints
-$bkpt-min-sm: 576px // landscape phones, 576px and up
-$bkpt-min-md: 768px // tablets, 768px and up
-$bkpt-min-lg: 992px // desktops, 992px and up
-$bkpt-min-xl: 1200px // large desktops, 1200px and up
-$bkpt-min-xxl: 1400px // larger desktops, 1400px and up
-$bkpt-min-xxxl: 1650px // xtra larger desktops, 1650px and up
-
+$min-sm: 576px // landscape phones, 576px and up
+$min-md: 768px // tablets, 768px and up
+$min-lg: 992px // desktops, 992px and up
+$min-xl: 1200px // large desktops, 1200px and up
+$min-xxl: 1400px // larger desktops, 1400px and up
+$min-xxxl: 1650px // xtra larger desktops, 1650px and up
 
 // Global Styles
 a:hover, a:focus
@@ -28,6 +27,10 @@ body, html
   color: $white
   font-family: $p-font
 
+section
+  display: flex
+  justify-content: center  
+
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
   margin: 0
@@ -37,14 +40,11 @@ h1
   font-style: italic
   font-weight: 700
   margin: 0.5em 0
-  width: 100%
-  justify-content: flex-start
-
+  
 .row
   padding: 0 10%
 
 p
-  margin-bottom: 0
   font-size: 0.95em
   line-height: 1.5em
 
@@ -61,52 +61,31 @@ h6
   margin-top: 15px
   text-align: center
 
-/* --- global styles media queries ---
-@media (max-width: 768px)
-  p
-    line-height: 1.6em
-
-  h6
-    font-size: 1.3em
-
 /* --------------------- H E A D E R --------------------
-
 header
   background-color: $main-brown
-  text-align: center
 
-  .header-logo
-    width: 40%
-    height: auto
-    padding-top: 35px
-    padding-bottom: 5px
-    margin: 0 auto
+.header-logo
+  margin: 0 auto
+  padding-top: 5%
+  width: 75%
 
-.header-logo img
-  height: auto
+  @media ( min-width: $min-md )
+    padding-top: 3%
+    width: 60%
+
+  @media ( min-width: $min-lg )
+    padding-top: 1.5%
+    width: 45%
 
 /* Site Title & Logo
-
 .site-logo
   h1, p
-    font-family: $header-font, serif
+    font-family: $header-font
     font-size: 2em
     font-weight: 600
 
-/* --- site title media queries ---
-@media (max-width: 768px)
-  header .header-logo
-    padding-top: 20px
-    width: 80%
-
-@media (max-width: 480px)
-  header .header-logo
-    width: 80%
-
 /* Nav Menu
-.header-top-inner
-    background-color: $main-brown
-
 .builder-item
   margin-top: 0
 
@@ -128,46 +107,43 @@ header
       &:hover
         color: $white
        
-
-/*------- navbar media queries -----
-@media (max-width: 1024px)
-  .nav-list li
-    padding: 0 5px 20px 5px
-
-    a
-      font-size: 0.9em
-
-/* Hero Img
-
+/* Hero Section
 .hero
   position: relative
-
-.hero-img
   background-image: url(../img/hero.png)
-  background-size: cover
-  background-position: center
-  height: 100vh
+  padding: 5% 10%
 
-/* Welcome Card
-
+  @media ( min-width: $min-lg )
+    display: flex
+    justify-content: flex-start
+    background-size: cover
+    background-position: center
+    padding: 10%
+    
 .hero-card
   background-color: $header-color
   display: flex
   flex-direction: column
-  padding: 4%
-  position: absolute
-  top: 15%
-  left: 10%
   max-width: 500px
+  padding: 8%
 
+  @media ( min-width: $min-md )
+    padding: 4%
+  
 .hero-text
   padding: 3% 0
+
+  @media ( min-width: $min-lg )
+    padding: 3% 1%
 
 h2
   color: $main-brown
   font-weight: 700
-  font-size: 3.5em
-  line-height: 1.3em
+  font-size: 2.8em
+  line-height: 1.3
+
+  @media ( min-width: $min-md )
+    font-size: 3.5em
 
 h4
   color: #404248
@@ -178,74 +154,29 @@ h4
 
 h5
   font-weight: 700
-  font-size: 1.1em
   text-align: center
+
+.hero-btn
+  margin: 1% 0  
 
 .hero-btn a
   color: $accent-green
-  padding: 10px 50px
+  padding: 3% 15%
   border: 1.5px solid $accent-green
   border-radius: 30px
+  font-size: 1.2em
 
-  &:hover, &:active
+  @media ( min-width: $min-md )
+    font-size: 1em
+    padding: 2.5% 12%
+
+  &:hover
     color: $white
     border: 2px transparent $accent-green
     background-color: $accent-green
     transition: 0.2s
 
-/* --- welcome card media queries ---
-
-@media (max-width: 768px)
-
-  h2
-    font-size: 2.7em
-    line-height: 1.2em
-
-  h4
-    color: #404248
-    margin-top: 10px
-    margin-bottom: 0
-
-  h5
-    font-weight: 700
-    font-size: 0.9em
-    text-align: center
-    margin-top: 35px
-
-  .welcome-btn a
-    &:link, &:visited
-      padding: 10px 40px
-
-@media (max-width: 480px)
-  .welcome-card
-    padding: 30px 30px 25px 30px
-    width: 60%
-
-  h2
-    font-size: 2.1em
-    line-height: 1.2em
-
-@media (max-width: 400px)
-  .welcome-card
-    padding: 30px 25px 15px 25px
-    width: 60%
-
-  h2
-    font-size: 1.6em
-    line-height: 1.2em
-
-  h4
-    font-size: 0.9em
-
-  h5
-    font-size: 0.8em
-
-  .welcome-btn a
-    &:link, &:visited
-      padding: 8px 30px
-
 /* --- Homepage Galleries ---
-
 .service-gallery, .book-gallery, .testimonial-gallery
   display: flex
   justify-content: center
@@ -299,61 +230,7 @@ img
    font-weight: 500
    margin-top: 2%
 
-/* --- homepage testimonial media queries ---
-
-@media (max-width: 1024px)
-  .service
-    width: 50%
-    padding: 0 4%
-    margin: 4% 0
-
-  .service-gallery
-    margin-top: 5%
-    margin-bottom: 7%
-
-  .homepage-testimonial
-    border: 1px solid $header-color
-
-@media (max-width: 768px)
-  .service
-    width: 48%
-    padding: 0 6%
-
-  .homepage-images
-    border: 3px solid $header-color
-
-  .testimonial
-    width: 100%
-    margin: 1% 0%
-
-  .testimonial-gallery
-    margin: 3% 0
-
-@media (max-width: 480px)
-  .service
-    width: 90%
-    padding: 0 4%
-
-    figure
-      width: 60%
-      margin: 0 auto
-
-  .book-gallery
-    padding: 10% 0
-
-  .testimonial
-    margin: 3% 0
-
-  .testimonial-gallery
-    padding: 5% 0
-
-  .homepage-images
-    border: 3px solid $header-color
-    width: 50%
-
-  .homepage-testimonial
-    border: .5px solid $header-color
-    border-radius: 40px
+/* --- homepage testimonial media queries --- */
 
 /* ------------------- F O O T E R -------------------
 
@@ -385,18 +262,6 @@ footer p
     &:hover
       color: $white
 
-/* --- footer styles media queries ---
-@media (max-width: 768px)
-  .social-icons
-    ul li
-      margin-top: 35px
-
-    img
-      width: 35px
-
-@media (max-width: 480px)
-  .social-icons ul li
-    padding: 0 15px
 
 /* ------------------- P A G E S -------------------
 /* --- ABOUT ---
@@ -421,26 +286,7 @@ footer p
   padding: 8% 10%
   margin-bottom: 50px
 
-/* --- about media queries ---
-@media (min-width: 1300px)
-  .about-summary
-    margin-top: -10%
-
-@media (max-width: 1024px)
-  .about-summary
-    margin-top: -110%
-
-@media (max-width: 768px)
-  .about-page-sidebar
-    display: none
-
-  .about-page-text
-    width: 100%
-    text-align: center
-    padding: 0 5%
-
 /* --- SERVICES ---
-
 .service-intro
   font-style: italic
   line-height: 1.5em
@@ -475,60 +321,6 @@ footer p
   width: 50%
   padding-right: 0
 
-/* --- services media queries ---
-
-/* --- testimonials media queries ---
-@media (max-width: 1024px)
-  .service-item-images
-    width: 44%
-    padding-left: 3%
-
-  .service-item-text
-    width: 55%
-    padding-right: 0
-
-  .service-item
-    margin-bottom: 60px
-
-@media (max-width: 768px)
-  .service-item:nth-child(even)
-    display: flex
-    width: 100%
-    flex-direction: column
-
-  .service-item-text:nth-child(even)
-    width: 70%
-
-  .service-item-images
-    display: block
-    margin: 2% 20%
-    width: 50%
-
-  .service-item-text
-    padding-right: 0
-    text-align: center
-
-  .service-item
-    width: 100%
-    display: flex
-    flex-direction: column
-    margin-bottom: 60px
-
-  .tab-space
-    padding-left: 0px
-
-  h1
-    font-size: 2.8em
-
-  h3
-    font-size: 1.7em
-
-@media (max-width: 480px)
-  h1
-    font-size: 2.5em
-
-  h3
-    font-size: 1.5em
 
 /* --- TESTIMONIALS ---
 
@@ -569,28 +361,6 @@ footer p
 
 .testimonial-text:nth-child(even)
   margin-left: 6%
-
-/* --- testimonials media queries ---
-@media (max-width: 1024px)
-  .image-border
-    border: 3px solid $header-color
-
-  .book-images:nth-child(odd)
-    padding-left: 6%
-
-@media (max-width: 768px)
-  .book-images
-    display: none
-
-  .testimonial-text
-    display: block
-    border-radius: 40px
-    margin: 10px 0
-    width: 80%
-    padding: 5%
-
-  .author-info
-    font-size: 0.9em
 
 /* CONTACT PAGE
 
@@ -684,19 +454,5 @@ h2.comments-title
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
-
-/* --- single blog post media queries ---
-@media (max-width: 1024px)
-  .nv-title-meta-wrap h1
-    font-size: 3.0em
-    line-height: 140%
-
-@media (max-width: 480px)
-  .nv-title-meta-wrap h1
-    font-size: 2.3em
-    font-weight: 800
-
-  .entry-content h2
-    font-size: 1.5em
 
 
