@@ -74,8 +74,7 @@ get_header(); ?>
 				</div>	
 			</article>	
 		<?php endwhile; ?>
-	<?php wp_reset_query(); ?>
-		
+	<?php wp_reset_query(); ?>		
 </section>
 	
 <?php get_footer(); ?>

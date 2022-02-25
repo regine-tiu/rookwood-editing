@@ -264,6 +264,16 @@ h5 {
   width: 50%;
   padding: 3%;
 }
+@media (max-width: 767.98px) {
+  .testimonial {
+    width: 75%;
+  }
+}
+@media (max-width: 575.98px) {
+  .testimonial {
+    width: 90%;
+  }
+}
 
 .homepage-testimonial {
   display: inherit;
@@ -281,9 +291,9 @@ h5 {
 
 .author-info {
   color: #242525;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 500;
-  margin-top: 2%;
+  line-height: 1.2;
 }
 
 /* --- homepage testimonial media queries --- */

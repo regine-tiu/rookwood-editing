@@ -253,6 +253,12 @@ h5
   width: 50%
   padding: 3%
 
+  @media (max-width: $max-md)
+    width: 75%
+
+  @media (max-width: $max-sm)
+    width: 90%  
+
 .homepage-testimonial
   display: inherit
   flex-direction: column
@@ -268,9 +274,9 @@ h5
 
 .author-info
    color: $dark-grey
-   font-size: 0.9em
+   font-size: 0.85em
    font-weight: 500
-   margin-top: 2%
+   line-height: 1.2
 
 /* --- homepage testimonial media queries --- */
 
@@ -303,7 +309,6 @@ footer p
 
     &:hover
       color: $white
-
 
 /* ------------------- P A G E S -------------------
 /* --- ABOUT ---
