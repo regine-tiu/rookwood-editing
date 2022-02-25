@@ -48,37 +48,34 @@ get_header(); ?>
 </section>
 
 <section class="book-gallery">
-	<div class="row">
-		<?php query_posts('posts_per_page=3&post_type=testimonials'); ?>
-			<?php while ( have_posts() ) : the_post(); 
-					$book_cover = get_field("book_cover");
-					$book_link = get_field("book_link"); ?>
-			
-					<div class="gallery-imgs">	
-						<a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $book_cover, $size ); ?></a>
-					</div>
-					
-			<?php endwhile; ?>
-		<?php wp_reset_query(); ?>
-	</div>			
+	<?php query_posts('posts_per_page=3&post_type=testimonials'); ?>
+		<?php while ( have_posts() ) : the_post(); 
+				$book_cover = get_field("book_cover");
+				$book_link = get_field("book_link"); ?>
+		
+				<div class="gallery-imgs">	
+					<a href="<?php echo $book_link; ?>" target="_blank"><?php echo wp_get_attachment_image( $book_cover, $size ); ?></a>
+				</div>
+				
+		<?php endwhile; ?>
+	<?php wp_reset_query(); ?>		
 </section>
 
 <section class="testimonial-gallery">
-	<div class="row">
-		<?php query_posts('posts_per_page=2&post_type=testimonials'); ?>
-			<?php while ( have_posts() ) : the_post(); 
-					$author_info = get_field("author_info"); ?>
-				<article class="testimonial">
-					<div class="homepage-testimonial">
-						<a href="<?php echo site_url('/testimonials')?>"><?php the_content(); ?></a>	
-							<div class="author-info">
-               					<?php echo $author_info; ?>
-              				</div> 
-					</div>	
-				</article>	
-			<?php endwhile; ?>
-		<?php wp_reset_query(); ?>
-	</div>			
+	<?php query_posts('posts_per_page=2&post_type=testimonials'); ?>
+		<?php while ( have_posts() ) : the_post(); 
+				$author_info = get_field("author_info"); ?>
+			<article class="testimonial">
+				<div class="homepage-testimonial">
+					<a href="<?php echo site_url('/testimonials')?>"><?php the_content(); ?></a>	
+						<div class="author-info">
+							<?php echo $author_info; ?>
+						</div> 
+				</div>	
+			</article>	
+		<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+		
 </section>
 	
 <?php get_footer(); ?>

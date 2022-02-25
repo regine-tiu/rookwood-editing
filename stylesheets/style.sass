@@ -1,6 +1,7 @@
 // Colors
 $background-blue: #4081B0 //#4D8FBE
 $header-color: #F7F2ED
+$lighter-blue: #4c90c0
 $dark-grey: #242525
 $accent-green: #509082
 $main-brown: #BC742B
@@ -194,17 +195,7 @@ h5
   text-align: center
   width: 100%
 
-// .service-gallery
-//   @media ( max-width: $max-lg )
-//   flex-direction: column
-//   align-items: center
-
-img
-  max-width: 80%
- 
-  @media ( max-width: $max-sm )
-    max-width: 70%
-
+// service gallery --------
 .service
   width: 25%
   padding: 0 1%
@@ -217,17 +208,49 @@ img
     width: 100%
     padding: 2% 7%
 
-.gallery-imgs
-  border-radius: 3px
-  box-shadow: 20px 20px 1px #3a3d44cb
-  margin: 0 6%
-  width: 20%
+  img
+    max-width: 80%
+ 
+    &:hover
+      transform: scale(1.05)
+      transition: 0.2s
+ 
+  @media ( max-width: $max-sm )
+    max-width: 70%
+  
+// book gallery --------
+.book-gallery
+  background-color: $lighter-blue
 
+.gallery-imgs
+  margin: 3% 2%
+
+  @media ( max-width: 890px )
+    &:last-child
+        margin-top: 30px
+
+  @media ( max-width: $max-sm )
+    &:last-child
+      margin-top: 3%
+
+  img
+    border-radius: 2%
+    box-shadow: 20px 20px 1px #3a3d44cb
+    width: 75%
+
+    @media ( max-width: $max-sm )
+      box-shadow: 15px 15px 1px #3a3d44cb
+      width: 60%
+
+    &:hover
+      transform: scale(1.05)
+      transition: 0.3s
+ 
+// testimonial gallery  
 .testimonial
   display: flex
   justify-content: center
   width: 50%
-  margin: 5% 0
   padding: 3%
 
 .homepage-testimonial
@@ -473,5 +496,3 @@ h2.comments-title
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
-
-
