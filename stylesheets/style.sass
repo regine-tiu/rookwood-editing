@@ -18,6 +18,14 @@ $min-xl: 1200px // large desktops, 1200px and up
 $min-xxl: 1400px // larger desktops, 1400px and up
 $min-xxxl: 1650px // xtra larger desktops, 1650px and up
 
+// Max width breakpoints
+$max-sm: 575.98px
+$max-md: 767.98px
+$max-lg: 991.98px
+$max-xl: 1199.98px
+$max-xxl: 1399.98px
+$max-xxxl: 1649.98px
+
 // Global Styles
 a:hover, a:focus
   text-decoration: none
@@ -29,7 +37,8 @@ body, html
 
 section
   display: flex
-  justify-content: center  
+  justify-content: center 
+  padding: 8% 6%
 
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
@@ -41,8 +50,8 @@ h1
   font-weight: 700
   margin: 0.5em 0
   
-.row
-  padding: 0 10%
+// .row
+//   padding: 0 10%
 
 p
   font-size: 0.95em
@@ -72,11 +81,11 @@ header
 
   @media ( min-width: $min-md )
     padding-top: 3%
-    width: 60%
+    width: 55%
 
   @media ( min-width: $min-lg )
     padding-top: 1.5%
-    width: 45%
+    width: 40%
 
 /* Site Title & Logo
 .site-logo
@@ -180,23 +189,33 @@ h5
 .service-gallery, .book-gallery, .testimonial-gallery
   display: flex
   justify-content: center
-  align-content: space-between
+  // align-content: space-between
   flex-flow: row wrap
   text-align: center
   width: 100%
 
+// .service-gallery
+//   @media ( max-width: $max-lg )
+//   flex-direction: column
+//   align-items: center
+
 img
-  height: 100%
-  max-width: 100%
+  max-width: 80%
+ 
+  @media ( max-width: $max-sm )
+    max-width: 70%
 
 .service
   width: 25%
   padding: 0 1%
-  margin: 7% auto
 
-.book-gallery
-  background-color: #4D8FBE
-  padding: 8% 0
+  @media ( max-width: $max-lg )
+    width: 50%
+    padding: 1% 5%
+
+  @media ( max-width: $max-sm )
+    width: 100%
+    padding: 2% 7%
 
 .gallery-imgs
   border-radius: 3px

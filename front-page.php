@@ -29,24 +29,22 @@ get_header(); ?>
 </section>
 
 <section class="service-gallery">
-	<div class="row">
-		<?php query_posts('posts_per_page=4&post_type=services'); ?>
-			<?php while ( have_posts() ) : the_post(); 
-					$service_logo = get_field("service_image");
-					$size = "medium"; 
-					$service_summary = get_field("service_summary");?>
-				<article class="service">	
-					<figure>
-						<a href="<?php echo site_url('/services')?>"><?php echo wp_get_attachment_image($service_logo, $size); ?></a>
-					</figure>
-						<div class="service-summary">
-							<h6><?php the_title(); ?></a></h6>
-							<p><?php echo $service_summary; ?></p>
-						</div>	
-				</article>	
-			<?php endwhile; ?>
-		<?php wp_reset_query(); ?>
-	</div>			
+	<?php query_posts('posts_per_page=4&post_type=services'); ?>
+		<?php while ( have_posts() ) : the_post(); 
+				$service_logo = get_field("service_image");
+				$size = "medium"; 
+				$service_summary = get_field("service_summary");?>
+			<article class="service">	
+				<figure>
+					<a href="<?php echo site_url('/services')?>"><?php echo wp_get_attachment_image($service_logo, $size); ?></a>
+				</figure>
+					<div class="service-summary">
+						<h6><?php the_title(); ?></a></h6>
+						<p><?php echo $service_summary; ?></p>
+					</div>	
+			</article>	
+		<?php endwhile; ?>
+	<?php wp_reset_query(); ?>			
 </section>
 
 <section class="book-gallery">
