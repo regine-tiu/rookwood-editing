@@ -18,6 +18,11 @@ section {
   justify-content: center;
   padding: 8% 6%;
 }
+@media (min-width: 1200px) {
+  section {
+    padding: 6%;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: playfair-display, serif;
@@ -301,17 +306,22 @@ header {
 .testimonial {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 90%;
   padding: 3%;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 768px) {
   .testimonial {
     width: 75%;
   }
 }
-@media (max-width: 575.98px) {
+@media (min-width: 992px) {
   .testimonial {
-    width: 90%;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .testimonial {
+    width: 43%;
   }
 }
 
@@ -325,18 +335,26 @@ header {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1200px) {
+  .homepage-testimonial {
+    padding: 10%;
+  }
+}
 .homepage-testimonial a {
   color: #fff;
 }
 
 .author-info {
-  color: #242525;
   font-size: 0.85em;
   font-weight: 500;
   line-height: 1.2;
 }
+@media (max-width: 991.98px) {
+  .author-info {
+    font-size: 0.95em;
+  }
+}
 
-/* --- homepage testimonial media queries --- */
 /* ------------------- F O O T E R ------------------- */
 footer {
   background-color: #BC742B;

@@ -44,6 +44,9 @@ section
   justify-content: center 
   padding: 8% 6%
 
+  @media ( min-width: $min-xl )
+    padding: 6%
+
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
   margin: 0
@@ -208,7 +211,6 @@ header
 .service-gallery, .book-gallery, .testimonial-gallery
   display: flex
   justify-content: center
-  // align-content: space-between
   flex-flow: row wrap
   text-align: center
   width: 100%
@@ -270,14 +272,17 @@ header
 .testimonial
   display: flex
   justify-content: center
-  width: 50%
+  width: 90%  
   padding: 3%
 
-  @media (max-width: $max-md)
+  @media (min-width: $min-md)
     width: 75%
 
-  @media (max-width: $max-sm)
-    width: 90%  
+  @media (min-width: $min-lg)
+    width: 50%
+
+  @media (min-width: $min-xl)
+    width: 43%
 
 .homepage-testimonial
   display: inherit
@@ -289,16 +294,19 @@ header
   align-items: center
   justify-content: center
 
+  @media (min-width: $min-xl)
+    padding: 10%
+
   a
    color: $white
 
 .author-info
-   color: $dark-grey
    font-size: 0.85em
    font-weight: 500
    line-height: 1.2
 
-/* --- homepage testimonial media queries --- */
+   @media (max-width: $max-lg)
+    font-size: 0.95em
 
 /* ------------------- F O O T E R -------------------
 
