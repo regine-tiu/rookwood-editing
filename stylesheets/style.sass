@@ -36,6 +36,9 @@ body, html
   color: $white
   font-family: $p-font
 
+  @media ( min-width: $min-xl )
+    font-size: 1.1em
+
 section
   display: flex
   justify-content: center 
@@ -50,13 +53,18 @@ h1
   font-style: italic
   font-weight: 700
   margin: 0.5em 0
-  
-// .row
-//   padding: 0 10%
 
-p
-  font-size: 0.95em
-  line-height: 1.5em
+h2
+  color: $main-brown
+  font-weight: 700
+  font-size: 2.8em
+  line-height: 1.3
+
+  @media ( min-width: $min-md )
+    font-size: 3.5em
+
+  @media ( min-width: $min-xl)
+    font-size: 3.8em  
 
 h3
   color: $header-color
@@ -64,12 +72,32 @@ h3
   margin-top: 0px
   text-align: center
 
+h4
+  color: #404248
+  margin: 20px 0
+  font-weight: 600
+  text-align: center
+  line-height: 1.3em
+
+  @media ( min-width: $min-xl)
+    margin: 25px
+
+h5
+  font-weight: 700
+  text-align: center  
+
 h6
   color: $header-color//#000000d0
   font-weight: 700
   font-size: 1.3em
-  margin-top: 15px
+  margin: 3% 0
   text-align: center
+
+  @media ( min-width: $min-xl)
+    font-size: 1.4em
+p
+  font-size: 0.95em
+  line-height: 1.5em  
 
 /* --------------------- H E A D E R --------------------
 header
@@ -87,6 +115,10 @@ header
   @media ( min-width: $min-lg )
     padding-top: 1.5%
     width: 40%
+
+  @media ( min-width: $min-xl )
+    width: 30%
+
 
 /* Site Title & Logo
 .site-logo
@@ -128,7 +160,7 @@ header
     justify-content: flex-start
     background-size: cover
     background-position: center
-    padding: 10%
+    padding: 11%
     
 .hero-card
   background-color: $header-color
@@ -139,32 +171,15 @@ header
 
   @media ( min-width: $min-md )
     padding: 4%
-  
+
+  @media ( min-width: $min-xl)
+    max-width: 650px
+
 .hero-text
   padding: 3% 0
 
   @media ( min-width: $min-lg )
     padding: 3% 1%
-
-h2
-  color: $main-brown
-  font-weight: 700
-  font-size: 2.8em
-  line-height: 1.3
-
-  @media ( min-width: $min-md )
-    font-size: 3.5em
-
-h4
-  color: #404248
-  margin: 20px 0
-  font-weight: 600
-  text-align: center
-  line-height: 1.3em
-
-h5
-  font-weight: 700
-  text-align: center
 
 .hero-btn
   margin: 1% 0  
@@ -179,6 +194,9 @@ h5
   @media ( min-width: $min-md )
     font-size: 1em
     padding: 2.5% 12%
+
+  @media ( min-width: $min-xl )  
+    border: 2px solid $accent-green
 
   &:hover
     color: $white
@@ -221,26 +239,28 @@ h5
 // book gallery --------
 .book-gallery
   background-color: $lighter-blue
+  padding: 5% 0
 
 .gallery-imgs
   margin: 3% 2%
 
-  @media ( max-width: 890px )
-    &:last-child
-        margin-top: 30px
-
   @media ( max-width: $max-sm )
     &:last-child
-      margin-top: 3%
+      margin-top: 3%  
+
+  @media ( min-width: $min-xl ) 
+    margin: 3% 4%   
 
   img
     border-radius: 2%
     box-shadow: 20px 20px 1px #3a3d44cb
-    width: 75%
+    width: 70% 
 
     @media ( max-width: $max-sm )
       box-shadow: 15px 15px 1px #3a3d44cb
-      width: 60%
+
+    @media ( min-width: $min-xl )
+      width: 110%
 
     &:hover
       transform: scale(1.05)
