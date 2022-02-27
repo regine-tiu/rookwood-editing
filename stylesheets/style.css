@@ -24,6 +24,14 @@ section {
   }
 }
 
+.page {
+  padding: 0;
+}
+
+.container {
+  padding: 3% 5%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: playfair-display, serif;
   margin: 0;
@@ -33,7 +41,14 @@ h1 {
   font-size: 3.5em;
   font-style: italic;
   font-weight: 700;
-  margin: 0.5em 0;
+  margin: 0.1em 0;
+  text-align: center;
+  color: #F7F2ED;
+}
+@media (min-width: 768px) {
+  h1 {
+    text-align: left;
+  }
 }
 
 h2 {
@@ -120,7 +135,7 @@ header {
 }
 @media (min-width: 1200px) {
   .header-logo {
-    width: 30%;
+    width: 28%;
   }
 }
 
@@ -502,17 +517,27 @@ footer p a:hover {
 /* CONTACT PAGE */
 .contact-form {
   padding: 0 8%;
-  color: #F7F2ED;
   font: azo-sans-web, open sans, sans-serif;
+  font-size: 0.9em;
+}
+
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
-  border-radius: 20px;
-  border: none;
-  background-color: #509082;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #fff;
   color: #fff;
-  margin-top: 15px;
-  padding: 10px 30px;
+  margin-top: 30px;
+  padding: 1% 5%;
+}
+div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-container-full .wpforms-form button[type=submit]:hover, div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+  background: #fff;
+  color: #509082;
+  opacity: 1;
 }
 
 /* BLOG */

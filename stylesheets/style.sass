@@ -37,7 +37,7 @@ body, html
   font-family: $p-font
 
   @media ( min-width: $min-xl )
-    font-size: 1.1em
+    font-size: 1.1em    
 
 section
   display: flex
@@ -47,6 +47,12 @@ section
   @media ( min-width: $min-xl )
     padding: 6%
 
+.page
+  padding: 0 
+
+.container
+  padding: 3% 5% 
+
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
   margin: 0
@@ -55,7 +61,12 @@ h1
   font-size: 3.5em
   font-style: italic
   font-weight: 700
-  margin: 0.5em 0
+  margin: 0.1em 0
+  text-align: center
+  color: $header-color
+
+  @media ( min-width: $min-md)
+    text-align: left  
 
 h2
   color: $main-brown
@@ -120,7 +131,7 @@ header
     width: 40%
 
   @media ( min-width: $min-xl )
-    width: 30%
+    width: 28%
 
 
 /* Site Title & Logo
@@ -441,17 +452,26 @@ footer p
 
 .contact-form
   padding: 0 8%
-  color: $header-color
   font: $p-font
+  font-size: 0.9em
+
+.wpforms-submit-container  
+  display: flex
+  justify-content: center
 
 div.wpforms-container-full .wpforms-form
   input[type=submit], button[type=submit], .wpforms-page-button
-    border-radius: 20px
-    border: none
-    background-color: $accent-green
+    border-radius: 50px
+    background: transparent
+    border: 2px solid $white
     color: $white
-    margin-top: 15px
-    padding: 10px 30px
+    margin-top: 30px
+    padding: 1% 5%
+  
+    &:hover
+      background: $white
+      color: $accent-green
+      opacity: 1
 
 /* BLOG
 /* ---- Blog Archive ----

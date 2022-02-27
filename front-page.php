@@ -67,7 +67,7 @@ get_header(); ?>
 				$author_info = get_field("author_info"); ?>
 			<article class="testimonial">
 				<div class="homepage-testimonial">
-					<a href="<?php echo site_url('/testimonials')?>"><?php the_content(); ?></a>	
+					<a href="<?php echo site_url('/testimonial')?>"><?php the_content(); ?></a>	
 						<div class="author-info">
 							<?php echo $author_info; ?>
 						</div> 
