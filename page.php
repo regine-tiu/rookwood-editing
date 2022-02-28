@@ -10,7 +10,7 @@ $container_class = apply_filters( 'neve_container_class_filter', 'container', 's
 get_header();
 
 ?>
-<section class="page">
+<section>
 	<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
 			
 		<?php while ( have_posts() ) : the_post(); ?>

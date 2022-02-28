@@ -41,17 +41,15 @@ body, html
 
 section
   display: flex
+  flex-direction: column 
   justify-content: center 
-  padding: 8% 6%
+  padding: 5% 8%
 
   @media ( min-width: $min-xl )
-    padding: 6%
-
-.page
-  padding: 0 
-
-.container
-  padding: 3% 5% 
+    padding: 4% 8%
+  
+.single-page-container
+  padding: 0  
 
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
@@ -61,12 +59,12 @@ h1
   font-size: 3.5em
   font-style: italic
   font-weight: 700
-  margin: 0.1em 0
   text-align: center
   color: $header-color
 
   @media ( min-width: $min-md)
-    text-align: left  
+    text-align: left 
+    margin: 0.1em 0 
 
 h2
   color: $main-brown
@@ -83,8 +81,13 @@ h2
 h3
   color: $header-color
   font-size: 2em
-  margin-top: 0px
+  font-weight: 400
+  margin: 0.2em
   text-align: center
+  letter-spacing: 0.5px
+  
+  @media ( min-width: $min-md)
+    margin: 0.3em
 
 h4
   color: #404248
@@ -113,14 +116,14 @@ p
   font-size: 0.95em
   line-height: 1.5em  
 
-/* --------------------- H E A D E R --------------------
+// Header
 header
   background-color: $main-brown
 
 .header-logo
   margin: 0 auto
   padding-top: 5%
-  width: 75%
+  width: 70%
 
   @media ( min-width: $min-md )
     padding-top: 3%
@@ -133,15 +136,14 @@ header
   @media ( min-width: $min-xl )
     width: 28%
 
-
-/* Site Title & Logo
+// Site Title & Logo
 .site-logo
   h1, p
     font-family: $header-font
     font-size: 2em
     font-weight: 600
 
-/* Nav Menu
+// Nav Menu
 .builder-item
   margin-top: 0
 
@@ -163,7 +165,7 @@ header
       &:hover
         color: $white
        
-/* Hero Section
+// Hero Section
 .hero
   position: relative
   background-image: url(../img/hero.png)
@@ -218,7 +220,7 @@ header
     background-color: $accent-green
     transition: 0.2s
 
-/* --- Homepage Galleries ---
+//  Homepage Galleries 
 .service-gallery, .book-gallery, .testimonial-gallery
   display: flex
   justify-content: center
@@ -226,7 +228,7 @@ header
   text-align: center
   width: 100%
 
-// service gallery --------
+// service gallery
 .service
   width: 25%
   padding: 0 1%
@@ -349,19 +351,27 @@ footer p
     &:hover
       color: $white
 
-/* ------------------- P A G E S -------------------
-/* --- ABOUT ---
+/* ----------- P A G E S 
+// About
+.about-page-wrapper
+  @media (min-width: $min-md)
+    display: flex
 
 .about-page-text
-  display: inline-block
-  width: 65%
-  padding: 0 3% 5% 3%
+  @media (min-width: $min-md) 
+    width: 60%
+
+  @media (min-width: $min-xl)   
+    width: 50%
+    margin: 2%
  
 .about-page-sidebar
-  width: 35%
-  display: inline-block
-  padding: 0 3%
+  @media (min-width: $min-md)
+    width: 40%
 
+  @media (min-width: $min-xl)   
+    width: 50%  
+    
 .about-summary-list
   color: $white
   font-size: 0.9em
@@ -369,8 +379,12 @@ footer p
   border: 1px solid $white
   display: block
   border-radius: 40px
-  padding: 8% 10%
-  margin-bottom: 50px
+  padding: 5%
+  margin: 3% 0
+
+  @media (min-width: $min-md)
+    margin: 0 0 0 10%
+    padding: 8%
 
 /* --- SERVICES ---
 .service-intro
@@ -406,7 +420,6 @@ footer p
 .service-item-text:nth-child(even)
   width: 50%
   padding-right: 0
-
 
 /* --- TESTIMONIALS ---
 
@@ -451,7 +464,6 @@ footer p
 /* CONTACT PAGE
 
 .contact-form
-  padding: 0 8%
   font: $p-font
   font-size: 0.9em
 

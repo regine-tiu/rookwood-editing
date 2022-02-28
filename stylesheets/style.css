@@ -15,21 +15,18 @@ body, html {
 
 section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 8% 6%;
+  padding: 5% 8%;
 }
 @media (min-width: 1200px) {
   section {
-    padding: 6%;
+    padding: 4% 8%;
   }
 }
 
-.page {
+.single-page-container {
   padding: 0;
-}
-
-.container {
-  padding: 3% 5%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,13 +38,13 @@ h1 {
   font-size: 3.5em;
   font-style: italic;
   font-weight: 700;
-  margin: 0.1em 0;
   text-align: center;
   color: #F7F2ED;
 }
 @media (min-width: 768px) {
   h1 {
     text-align: left;
+    margin: 0.1em 0;
   }
 }
 
@@ -71,8 +68,15 @@ h2 {
 h3 {
   color: #F7F2ED;
   font-size: 2em;
-  margin-top: 0px;
+  font-weight: 400;
+  margin: 0.2em;
   text-align: center;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 768px) {
+  h3 {
+    margin: 0.3em;
+  }
 }
 
 h4 {
@@ -111,7 +115,6 @@ p {
   line-height: 1.5em;
 }
 
-/* --------------------- H E A D E R -------------------- */
 header {
   background-color: #BC742B;
 }
@@ -119,7 +122,7 @@ header {
 .header-logo {
   margin: 0 auto;
   padding-top: 5%;
-  width: 75%;
+  width: 70%;
 }
 @media (min-width: 768px) {
   .header-logo {
@@ -139,14 +142,12 @@ header {
   }
 }
 
-/* Site Title & Logo */
 .site-logo h1, .site-logo p {
   font-family: playfair-display, serif;
   font-size: 2em;
   font-weight: 600;
 }
 
-/* Nav Menu */
 .builder-item {
   margin-top: 0;
 }
@@ -170,7 +171,6 @@ header {
   color: #fff;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   background-image: url(../img/hero.png);
@@ -242,7 +242,6 @@ header {
   transition: 0.2s;
 }
 
-/* --- Homepage Galleries --- */
 .service-gallery, .book-gallery, .testimonial-gallery {
   display: flex;
   justify-content: center;
@@ -402,18 +401,34 @@ footer p a:hover {
   color: #fff;
 }
 
-/* ------------------- P A G E S ------------------- */
-/* --- ABOUT --- */
-.about-page-text {
-  display: inline-block;
-  width: 65%;
-  padding: 0 3% 5% 3%;
+/* ----------- P A G E S  */
+@media (min-width: 768px) {
+  .about-page-wrapper {
+    display: flex;
+  }
 }
 
-.about-page-sidebar {
-  width: 35%;
-  display: inline-block;
-  padding: 0 3%;
+@media (min-width: 768px) {
+  .about-page-text {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .about-page-text {
+    width: 50%;
+    margin: 2%;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-page-sidebar {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .about-page-sidebar {
+    width: 50%;
+  }
 }
 
 .about-summary-list {
@@ -423,8 +438,14 @@ footer p a:hover {
   border: 1px solid #fff;
   display: block;
   border-radius: 40px;
-  padding: 8% 10%;
-  margin-bottom: 50px;
+  padding: 5%;
+  margin: 3% 0;
+}
+@media (min-width: 768px) {
+  .about-summary-list {
+    margin: 0 0 0 10%;
+    padding: 8%;
+  }
 }
 
 /* --- SERVICES --- */
@@ -516,7 +537,6 @@ footer p a:hover {
 
 /* CONTACT PAGE */
 .contact-form {
-  padding: 0 8%;
   font: azo-sans-web, open sans, sans-serif;
   font-size: 0.9em;
 }

@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<section class="page">
+<section>
 	<div class="row">
     <h1>Testimonials</h1>
     <div class="testimonial-row"> 
