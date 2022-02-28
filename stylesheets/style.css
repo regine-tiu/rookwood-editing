@@ -572,11 +572,18 @@ div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-c
 }
 
 .nv-index-posts {
-  width: 70%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .nv-index-posts {
+    width: 70%;
+  }
 }
 
-.nv-sidebar-wrap {
-  width: 20%;
+@media (min-width: 768px) {
+  .nv-sidebar-wrap {
+    width: 20%;
+  }
 }
 
 .nv-post-thumbnail-wrap {
@@ -585,8 +592,8 @@ div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-c
 }
 
 a {
-  font-weight: 600;
-  color: blue;
+  color: #fff;
+  font-weight: 400;
 }
 a:hover {
   transition: 0.2s;
@@ -598,7 +605,6 @@ a:hover {
     display: none;
   }
 }
-/* ---- Single Blog Post ---- */
 .nv-page-title {
   display: none;
 }
@@ -630,6 +636,12 @@ a:hover {
   width: 100%;
   margin: 0 auto;
 }
+.content .entry-summary a {
+  color: #242525;
+  font-family: azo-sans-web, open sans, sans-serif;
+  font-size: 0.75em;
+  padding-left: 1%;
+}
 @media (min-width: 768px) {
   .content .entry-summary {
     width: 90%;
@@ -640,18 +652,17 @@ a:hover {
   margin-top: 20px;
 }
 
-h2.comments-title {
-  color: #404248;
-  font-weight: 600;
-  font-size: 1.3em;
-}
-
 .post p {
   font-family: eb-garamond, serif;
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.4;
   margin-bottom: 25px;
+}
+
+h2.comments-title {
+  font-weight: 600;
+  font-size: 1.3em;
 }
 
 .comment-reply-title {
@@ -662,8 +673,18 @@ h2.comments-title {
   margin: 0 12%;
 }
 
-.blog-sidebar p {
-  text-align: center;
+.blog-sidebar {
+  display: block;
+  padding: 0 8%;
+}
+
+.widget_search {
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+.widget-title {
+  font-family: playfair-display, serif;
 }
 
 /*# sourceMappingURL=style.css.map */
