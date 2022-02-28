@@ -543,7 +543,6 @@ footer p a:hover {
   margin-left: 4%;
 }
 
-/* CONTACT PAGE */
 .contact-form {
   font: azo-sans-web, open sans, sans-serif;
   font-size: 0.9em;
@@ -568,62 +567,77 @@ div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-c
   opacity: 1;
 }
 
-/* BLOG */
-/* ---- Blog Archive ---- */
-.archive-container .row {
-  width: 100%;
-}
-
-.blog-row {
-  margin: 4% auto;
-  width: 95%;
+.blog .container {
+  max-width: 1500px;
 }
 
 .nv-index-posts {
   width: 70%;
 }
 
+.nv-sidebar-wrap {
+  width: 20%;
+}
+
 .nv-post-thumbnail-wrap {
   margin-bottom: 3%;
-}
-
-.content h2 {
-  font-family: playfair-display, serif;
-  font-size: 3em;
-  font-weight: 800;
-}
-
-.entry-title a:hover {
-  color: #F7F2ED;
+  border: none;
 }
 
 a {
-  color: #404248;
+  font-weight: 600;
+  color: blue;
 }
 a:hover {
   transition: 0.2s;
   color: #F7F2ED;
 }
 
-/* --- testimonials media queries --- */
 @media (max-width: 960px) {
   .widget_media_image, .widget_text {
     display: none;
   }
 }
 /* ---- Single Blog Post ---- */
-.nv-title-meta-wrap h1 {
-  color: #fff;
-  font-size: 3.5em;
-  font-weight: 800;
+.nv-page-title {
+  display: none;
 }
 
-.single-post-container .row {
+.content {
+  padding: 4% 3% 5%;
+}
+.content .entry-title {
+  text-align: center;
+  font-size: 3em;
+  line-height: 1.1;
+}
+.content .entry-title a {
+  color: #F7F2ED;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 400;
+}
+.content .nv-meta-list {
+  text-align: center;
+}
+.content .nv-meta-list li {
+  color: #F7F2ED;
+}
+.content .nv-meta-list li a {
+  color: #F7F2ED;
+}
+.content .entry-summary {
   width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .content .entry-summary {
+    width: 90%;
+  }
 }
 
-.nv-content-wrap .entry-content {
-  margin: 20px;
+.layout-grid .content .nv-meta-list {
+  margin-top: 20px;
 }
 
 h2.comments-title {
@@ -632,24 +646,12 @@ h2.comments-title {
   font-size: 1.3em;
 }
 
-.blog-sidebar p {
-  text-align: center;
-}
-
 .post p {
-  font-family: "Garamond";
-  font-size: 1.3em;
-  line-height: 1.5em;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.entry-content h2 {
-  color: #F7F2ED;
-  font-weight: 600;
-  font-size: 1.7em;
-  line-height: 120%;
-  margin: 40px 0 15px;
+  font-family: eb-garamond, serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 25px;
 }
 
 .comment-reply-title {
@@ -658,6 +660,10 @@ h2.comments-title {
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap {
   margin: 0 12%;
+}
+
+.blog-sidebar p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

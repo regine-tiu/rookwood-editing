@@ -10,6 +10,7 @@ $white: #fff
 // Fonts
 $p-font: azo-sans-web, open sans, sans-serif
 $header-font: playfair-display, serif
+$blog-font: eb-garamond, serif
 
 // Min width breakpoints
 $min-sm: 576px // landscape phones, 576px and up
@@ -459,7 +460,7 @@ footer p
 .testimonial-text:nth-child(even)
   margin-left: 4%
 
-/* CONTACT PAGE
+// Contact Form
 .contact-form
   font: $p-font
   font-size: 0.9em
@@ -482,79 +483,94 @@ div.wpforms-container-full .wpforms-form
       color: $accent-green
       opacity: 1
 
-/* BLOG
-/* ---- Blog Archive ----
-
-.archive-container .row
-  width: 100%
-
-.blog-row
-  margin: 4% auto
-  width: 95%
+// Blog
+.blog .container
+  max-width: 1500px
 
 .nv-index-posts
   width: 70%
 
+.nv-sidebar-wrap
+  width: 20%  
+
 .nv-post-thumbnail-wrap
   margin-bottom: 3%
-
-.content h2
-  font-family: $header-font
-  font-size: 3em
-  font-weight: 800
-
-.entry-title a:hover
-  color: $header-color
+  border: none
 
 a
-  color: #404248
+  font-weight: 600
+  color: blue
 
   &:hover
     transition: 0.2s
     color: $header-color
 
-/* --- testimonials media queries ---
 @media (max-width: 960px)
   .widget_media_image, .widget_text
     display: none
 
 /* ---- Single Blog Post ----
 
-.nv-title-meta-wrap h1
-  color: $white
-  font-size: 3.5em
-  font-weight: 800
+.nv-page-title 
+  display: none
 
-.single-post-container .row
-  width: 100%
+.content  
+  padding: 4% 3% 5%
 
-.nv-content-wrap .entry-content
-  margin: 20px
+  .entry-title
+    text-align: center
+    font-size: 3em
+    line-height: 1.1
+
+    a
+      color: $header-color
+      font-size: 0.8em
+      font-style: italic
+      font-weight: 400
+
+  .nv-meta-list
+    text-align: center
+  
+    li 
+      color: $header-color
+
+      a
+        color: $header-color
+
+  .entry-summary
+    width: 100%
+    margin: 0 auto
+
+    @media (min-width: $min-md)
+      width: 90%
+
+.layout-grid .content .nv-meta-list
+  margin-top: 20px    
 
 h2.comments-title
   color: #404248
   font-weight: 600
   font-size: 1.3em
-
-.blog-sidebar p
-  text-align: center
-
+  
 .post p
-  font-family: 'Garamond'
-  font-size: 1.3em
-  line-height: 1.5em
-  margin-bottom: 15px
-  font-weight: 500
+  font-family: $blog-font
+  font-weight: 400
+  font-size: 1.2em
+  line-height: 1.4
+  margin-bottom: 25px
 
-.entry-content h2
-  color: $header-color
-  font-weight: 600
-  font-size: 1.7em
-  line-height: 120%
-  margin: 40px 0 15px
+  // @media (min-width: $min-md)
+  //   font-size: 1.1em
+  //   line-height: 1.3
 
 .comment-reply-title
   color: $header-color
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
+
+
+// Sidebar
+.blog-sidebar p
+  text-align: center
+  
