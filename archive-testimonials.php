@@ -15,11 +15,11 @@
 get_header(); ?>
 
 <section>
-	<div class="row">
-    <h1>Testimonials</h1>
+  <h1>Testimonials</h1>
+  <div class="testimonial-page-wrapper">
     <div class="testimonial-row"> 
-		  <?php while ( have_posts() ) : the_post(); 
-      			$image = get_field("book_cover");
+      <?php while ( have_posts() ) : the_post(); 
+            $image = get_field("book_cover");
             $size = "medium"; 
             $author_info = get_field("author_info"); 
             $book_link = get_field("book_link"); ?> 
@@ -36,7 +36,7 @@ get_header(); ?>
           </article>	
         <?php endwhile; // end of the loop. ?>
       </div> 
-	</div>
+    </div>  
 </section>
 
 <?php get_footer(); ?>

@@ -31,13 +31,13 @@ section {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: playfair-display, serif;
+  font-weight: 700;
   margin: 0;
 }
 
 h1 {
   font-size: 3.5em;
   font-style: italic;
-  font-weight: 700;
   text-align: center;
   color: #F7F2ED;
 }
@@ -50,7 +50,6 @@ h1 {
 
 h2 {
   color: #BC742B;
-  font-weight: 700;
   font-size: 2.8em;
   line-height: 1.3;
 }
@@ -93,13 +92,11 @@ h4 {
 }
 
 h5 {
-  font-weight: 700;
   text-align: center;
 }
 
 h6 {
   color: #F7F2ED;
-  font-weight: 700;
   font-size: 1.3em;
   margin: 3% 0;
   text-align: center;
@@ -140,12 +137,6 @@ header {
   .header-logo {
     width: 28%;
   }
-}
-
-.site-logo h1, .site-logo p {
-  font-family: playfair-display, serif;
-  font-size: 2em;
-  font-weight: 600;
 }
 
 .builder-item {
@@ -401,7 +392,6 @@ footer p a:hover {
   color: #fff;
 }
 
-/* ----------- P A G E S  */
 @media (min-width: 768px) {
   .about-page-wrapper {
     display: flex;
@@ -448,7 +438,6 @@ footer p a:hover {
   }
 }
 
-/* --- SERVICES --- */
 .service-intro {
   font-style: italic;
   line-height: 1.5em;
@@ -490,31 +479,42 @@ footer p a:hover {
   padding-right: 0;
 }
 
-/* --- TESTIMONIALS --- */
 .testimonial-row {
-  margin-bottom: 50px;
-  padding: 0 3%;
+  max-width: 1450px;
+  margin: 0 auto;
 }
 
 .testimonial-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3%;
+  padding: 4%;
 }
 
 .book-imgs {
-  box-shadow: 20px 20px 1px #3a3d44;
-  height: 290px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .book-imgs {
+    display: block;
+    box-shadow: 20px 20px 1px #3a3d44;
+    height: 290px;
+  }
 }
 
 .testimonial-text {
   border: 2px solid #F7F2ED;
   border-radius: 50px;
-  width: 55%;
   line-height: 1.4em;
-  padding: 5%;
+  padding: 10% 8%;
   text-align: center;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .testimonial-text {
+    padding: 5%;
+    width: 55%;
+  }
 }
 .testimonial-text p {
   color: #fff;
@@ -523,7 +523,7 @@ footer p a:hover {
   margin-top: 10px;
   font-weight: 500;
   font-size: 0.9em;
-  color: #242525;
+  line-height: 1.4;
 }
 
 .testimonial-item:nth-child(even) {
@@ -532,7 +532,7 @@ footer p a:hover {
 }
 
 .testimonial-text:nth-child(even) {
-  margin-left: 6%;
+  margin-left: 4%;
 }
 
 /* CONTACT PAGE */
