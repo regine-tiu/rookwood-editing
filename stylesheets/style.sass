@@ -36,8 +36,11 @@ body, html
   color: $white
   font-family: $p-font
 
-  @media ( min-width: $min-xl )
-    font-size: 1.1em    
+  @media ( min-width: $min-lg )
+    font-size: 1.05em   
+
+  @media ( min-width: $min-lg ) 
+    font-size: 1.05em     
 
 section
   display: flex
@@ -79,14 +82,14 @@ h2
 
 h3
   color: $header-color
-  font-size: 2em
+  font-size: 1.7em
   font-weight: 400
-  margin: 0.2em
+  margin: 0.3em 0
   text-align: center
   letter-spacing: 0.5px
   
   @media ( min-width: $min-md)
-    margin: 0.3em
+    font-size: 2em
 
 h4
   color: #404248
@@ -311,7 +314,7 @@ header
    @media (max-width: $max-lg)
     font-size: 0.95em
 
-/* ------------------- F O O T E R -------------------
+// Footer
 footer
   background-color: $main-brown
 
@@ -375,39 +378,39 @@ footer p
     padding: 8%
 
 // Service Page
-.service-intro
-  font-style: italic
-  line-height: 1.5em
-  margin: 3% 13% -2% 13%
-  text-align: center
-
 .service-row
-  margin: 0 auto
-
-.service-item
   display: flex
-  flex-wrap: row
-  margin-bottom: 80px
+  flex-direction: column
   align-items: center
+  max-width: 1200px
+  margin: 5% auto
+  
+.service-item
+  display: flex  
+  flex-direction: column
+  align-items: center
+  margin: 3% auto
 
-.service-item-images
-  margin-top: 5%
-  width: 40%
-  display: inline-block
-  padding-left: 7%
+  @media (min-width: $min-md)
+    flex-direction: row
+
+.service-items-images
+  @media (min-width: $min-md)
+    padding-right: 5%  
 
 .service-item-text
-  width: 59%
-  display: inline-block
-  padding-right: 6%
+  width: 90%
+
+  h3
+    font-weight: 600
+
+  @media (min-width: $min-md)
+    width: 55%
 
 .service-item:nth-child(even)
-  display: flex
-  flex-direction: row-reverse
-
-.service-item-text:nth-child(even)
-  width: 50%
-  padding-right: 0
+  @media (min-width: $min-md)
+    display: flex  
+    flex-direction: row-reverse
 
 // Testimonial Page
 .testimonial-row

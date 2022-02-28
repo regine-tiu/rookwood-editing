@@ -16,11 +16,11 @@ get_header(); ?>
 
 <section>
   <h1>Services</h1>
-  <div class="service-intro">
+  <!-- <div class="service-intro">
     <?php 
         $intro = get_field("service_page_intro"); ?> 
       <?php echo $intro ; ?> 
-  </div>
+  </div> -->
 
   <div class="service-row">
   <?php query_posts('posts_per_page=4&post_type=services'); ?>
