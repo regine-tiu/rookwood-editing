@@ -585,4 +585,74 @@ h2.comments-title
 
 .widget-title
   font-family: $header-font  
+
+  @media (min-width: $min-lg)
+    text-align: center
   
+// Single Post
+.entry-header
+  h1
+    color: $header-color
+    text-align: center
+    font-size: 3em
+    line-height: 1.5
+    width: 90%
+    margin: 0.5em auto
+
+    @media (min-width: $min-sm)
+      font-size: 3.5em
+      margin: 0.8em auto
+      
+
+  .nv-title-meta-wrap  
+    color: $header-color
+    text-align: center
+    ul li
+      color: $header-color
+      margin: 0.1em 0
+      a
+        color: $header-color 
+  
+.nv-comment-content a, .nv-content-wrap a:not(.button):not(.wp-block-file__button)
+  color: $header-color
+  text-decoration: none
+  font-style: italic
+  font-weight: 600
+
+.nv-content-wrap
+  width: 90%
+  margin: 0 auto
+
+  @media (min-width: $min-sm)
+    width: 75%
+
+  h5
+    color: $header-color
+    font-size: 1.5em  
+    margin-bottom: 0.6em
+
+.comments-area
+  h3
+    color: $white
+    font-weight: 600    
+
+#comments .comment-reply-title
+  margin-bottom: 0.5em    
+
+.single-post-container                
+  .nv-sidebar-wrap 
+    display: none
+
+.button.button-secondary, #comments input[type="submit"], #comments input[type=submit], .cart-off-canvas .button.nv-close-cart-sidebar, .wp-block-button.is-style-secondary .wp-block-button__link
+  color: $header-color 
+  font-family: $p-font  
+  font-size: 0.75em
+  text-transform: lowercase
+  border-radius: 30px 
+  padding: 10px 25px
+
+  &:hover
+    background-color: $header-color
+    border: $header-color
+    color: $background-blue
+    transition: 0.2s
