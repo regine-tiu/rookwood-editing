@@ -237,7 +237,8 @@ header
     padding: 2% 7%
 
   img
-    max-width: 80%
+    margin-top: 5%
+    max-width: 100%
  
     &:hover
       transform: scale(1.05)
@@ -269,8 +270,8 @@ header
     @media ( max-width: $max-sm )
       box-shadow: 15px 15px 1px #3a3d44cb
 
-    @media ( min-width: $min-xl )
-      width: 110%
+    @media ( min-width: $min-lg )
+      width: 90%
 
     &:hover
       transform: scale(1.05)
@@ -289,8 +290,8 @@ header
   @media (min-width: $min-lg)
     width: 50%
 
-  @media (min-width: $min-xl)
-    width: 43%
+  // @media (min-width: $min-xl)
+  //   width: 43%
 
 .homepage-testimonial
   display: inherit
@@ -301,6 +302,10 @@ header
   padding: 8%
   align-items: center
   justify-content: center
+
+  &:hover
+    transform: scale(1.05)
+    transition: 0.3s
 
   @media (min-width: $min-xl)
     padding: 10%
@@ -384,9 +389,13 @@ footer p
   display: flex
   flex-direction: column
   align-items: center
-  max-width: 1200px
+  justify-content: center
+  max-width: 1000px
   margin: 5% auto
-  
+
+  @media (min-width: $min-sm)
+    margin: 0 auto
+
 .service-item
   display: flex  
   flex-direction: column
@@ -396,9 +405,9 @@ footer p
   @media (min-width: $min-md)
     flex-direction: row
 
-.service-items-images
+.service-item-images
   @media (min-width: $min-md)
-    padding-right: 5%  
+    padding: 0 3%  
 
 .service-item-text
   width: 90%
@@ -502,13 +511,13 @@ div.wpforms-container-full .wpforms-form
   margin-bottom: 3%
   border: none
 
-a
-  color: $white
-  font-weight: 400
+  a
+    color: $white
+    font-weight: 400
 
-  &:hover
-    transition: 0.2s
-    color: $header-color
+    &:hover
+      transition: 0.2s
+      color: $header-color
 
 @media (max-width: 960px)
   .widget_media_image, .widget_text
@@ -572,7 +581,6 @@ h2.comments-title
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
-
 
 // Sidebar
 .blog-sidebar

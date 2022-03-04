@@ -263,7 +263,8 @@ header {
   }
 }
 .service img {
-  max-width: 80%;
+  margin-top: 5%;
+  max-width: 100%;
 }
 .service img:hover {
   transform: scale(1.05);
@@ -303,9 +304,9 @@ header {
     box-shadow: 15px 15px 1px #3a3d44cb;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .gallery-imgs img {
-    width: 110%;
+    width: 90%;
   }
 }
 .gallery-imgs img:hover {
@@ -329,11 +330,6 @@ header {
     width: 50%;
   }
 }
-@media (min-width: 1200px) {
-  .testimonial {
-    width: 43%;
-  }
-}
 
 .homepage-testimonial {
   display: inherit;
@@ -344,6 +340,10 @@ header {
   padding: 8%;
   align-items: center;
   justify-content: center;
+}
+.homepage-testimonial:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 @media (min-width: 1200px) {
   .homepage-testimonial {
@@ -446,8 +446,14 @@ footer p a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  justify-content: center;
+  max-width: 1000px;
   margin: 5% auto;
+}
+@media (min-width: 576px) {
+  .service-row {
+    margin: 0 auto;
+  }
 }
 
 .service-item {
@@ -463,8 +469,8 @@ footer p a:hover {
 }
 
 @media (min-width: 768px) {
-  .service-items-images {
-    padding-right: 5%;
+  .service-item-images {
+    padding: 0 3%;
   }
 }
 
@@ -590,12 +596,11 @@ div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-c
   margin-bottom: 3%;
   border: none;
 }
-
-a {
+.nv-post-thumbnail-wrap a {
   color: #fff;
   font-weight: 400;
 }
-a:hover {
+.nv-post-thumbnail-wrap a:hover {
   transition: 0.2s;
   color: #F7F2ED;
 }
