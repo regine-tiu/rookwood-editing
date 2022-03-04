@@ -1,6 +1,8 @@
 // Colors
-$background-blue: #4081B0 //#4D8FBE
+$background-blue: #4081B0
 $header-color: #F7F2ED
+$lighter-blue: #4c90c0
+$link-blue: #091269e3
 $dark-grey: #242525
 $accent-green: #509082
 $main-brown: #BC742B
@@ -9,15 +11,23 @@ $white: #fff
 // Fonts
 $p-font: azo-sans-web, open sans, sans-serif
 $header-font: playfair-display, serif
+$blog-font: eb-garamond, serif
 
 // Min width breakpoints
-$bkpt-min-sm: 576px // landscape phones, 576px and up
-$bkpt-min-md: 768px // tablets, 768px and up
-$bkpt-min-lg: 992px // desktops, 992px and up
-$bkpt-min-xl: 1200px // large desktops, 1200px and up
-$bkpt-min-xxl: 1400px // larger desktops, 1400px and up
-$bkpt-min-xxxl: 1650px // xtra larger desktops, 1650px and up
+$min-sm: 576px // landscape phones, 576px and up
+$min-md: 768px // tablets, 768px and up
+$min-lg: 992px // desktops, 992px and up
+$min-xl: 1200px // large desktops, 1200px and up
+$min-xxl: 1400px // larger desktops, 1400px and up
+$min-xxxl: 1650px // xtra larger desktops, 1650px and up
 
+// Max width breakpoints
+$max-sm: 575.98px
+$max-md: 767.98px
+$max-lg: 991.98px
+$max-xl: 1199.98px
+$max-xxl: 1399.98px
+$max-xxxl: 1649.98px
 
 // Global Styles
 a:hover, a:focus
@@ -28,85 +38,107 @@ body, html
   color: $white
   font-family: $p-font
 
+  @media ( min-width: $min-lg )
+    font-size: 1.05em   
+
+  @media ( min-width: $min-lg ) 
+    font-size: 1.05em     
+
+section
+  display: flex
+  flex-direction: column 
+  justify-content: center 
+  padding: 5% 8%
+
+  @media ( min-width: $min-xl )
+    padding: 4% 8%
+  
+.single-page-container
+  padding: 0  
+
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
-  margin: 0
+  font-weight: 700
+  margin: 0  
 
 h1
   font-size: 3.5em
   font-style: italic
-  font-weight: 700
-  margin: 0.5em 0
-  width: 100%
-  justify-content: flex-start
+  text-align: center
+  color: $header-color
 
-.row
-  padding: 0 10%
+  @media ( min-width: $min-md)
+    text-align: left 
+    margin: 0.1em 0 
 
-p
-  margin-bottom: 0
-  font-size: 0.95em
-  line-height: 1.5em
+h2
+  color: $main-brown
+  font-size: 2.8em
+  line-height: 1.3
+
+  @media ( min-width: $min-md )
+    font-size: 3.5em
+
+  @media ( min-width: $min-xl)
+    font-size: 3.8em  
 
 h3
   color: $header-color
-  font-size: 2em
-  margin-top: 0px
+  font-size: 1.7em
+  font-weight: 400
+  margin: 0.3em 0
   text-align: center
+  letter-spacing: 0.5px
+  
+  @media ( min-width: $min-md)
+    font-size: 2em
+
+h4
+  color: #404248
+  margin: 20px 0
+  font-weight: 600
+  text-align: center
+  line-height: 1.3em
+
+  @media ( min-width: $min-xl)
+    margin: 25px
+
+h5
+  text-align: center  
 
 h6
-  color: $header-color//#000000d0
-  font-weight: 700
+  color: $header-color
   font-size: 1.3em
-  margin-top: 15px
+  margin: 3% 0
   text-align: center
 
-/* --- global styles media queries ---
-@media (max-width: 768px)
-  p
-    line-height: 1.6em
+  @media ( min-width: $min-xl)
+    font-size: 1.4em
+p
+  font-size: 0.95em
+  line-height: 1.5em  
 
-  h6
-    font-size: 1.3em
-
-/* --------------------- H E A D E R --------------------
-
+// Header
 header
   background-color: $main-brown
-  text-align: center
 
-  .header-logo
+.header-logo
+  margin: 0 auto
+  padding-top: 5%
+  width: 70%
+
+  @media ( min-width: $min-md )
+    padding-top: 3%
+    width: 55%
+
+  @media ( min-width: $min-lg )
+    padding-top: 1.5%
     width: 40%
-    height: auto
-    padding-top: 35px
-    padding-bottom: 5px
-    margin: 0 auto
 
-.header-logo img
-  height: auto
+  @media ( min-width: $min-xl )
+    width: 28%
 
-/* Site Title & Logo
-
-.site-logo
-  h1, p
-    font-family: $header-font, serif
-    font-size: 2em
-    font-weight: 600
-
-/* --- site title media queries ---
-@media (max-width: 768px)
-  header .header-logo
-    padding-top: 20px
-    width: 80%
-
-@media (max-width: 480px)
-  header .header-logo
-    width: 80%
-
-/* Nav Menu
-.header-top-inner
-    background-color: $main-brown
-
+// Nav Menu
 .builder-item
   margin-top: 0
 
@@ -128,157 +160,138 @@ header
       &:hover
         color: $white
        
-
-/*------- navbar media queries -----
-@media (max-width: 1024px)
-  .nav-list li
-    padding: 0 5px 20px 5px
-
-    a
-      font-size: 0.9em
-
-/* Hero Img
-
+// Hero Section
 .hero
   position: relative
-
-.hero-img
   background-image: url(../img/hero.png)
-  background-size: cover
-  background-position: center
-  height: 100vh
+  padding: 5% 10%
 
-/* Welcome Card
-
+  @media ( min-width: $min-lg )
+    display: flex
+    justify-content: flex-start
+    background-size: cover
+    background-position: center
+    padding: 11%
+    
 .hero-card
   background-color: $header-color
   display: flex
   flex-direction: column
-  padding: 4%
-  position: absolute
-  top: 15%
-  left: 10%
   max-width: 500px
+  padding: 8%
+
+  @media ( min-width: $min-md )
+    padding: 4%
+
+  @media ( min-width: $min-xl)
+    max-width: 650px
 
 .hero-text
   padding: 3% 0
 
-h2
-  color: $main-brown
-  font-weight: 700
-  font-size: 3.5em
-  line-height: 1.3em
+  @media ( min-width: $min-lg )
+    padding: 3% 1%
 
-h4
-  color: #404248
-  margin: 20px 0
-  font-weight: 600
-  text-align: center
-  line-height: 1.3em
-
-h5
-  font-weight: 700
-  font-size: 1.1em
-  text-align: center
+.hero-btn
+  margin: 1% 0  
 
 .hero-btn a
   color: $accent-green
-  padding: 10px 50px
+  padding: 3% 15%
   border: 1.5px solid $accent-green
   border-radius: 30px
+  font-size: 1.2em
 
-  &:hover, &:active
+  @media ( min-width: $min-md )
+    font-size: 1em
+    padding: 2.5% 12%
+
+  @media ( min-width: $min-xl )  
+    border: 2px solid $accent-green
+
+  &:hover
     color: $white
     border: 2px transparent $accent-green
     background-color: $accent-green
     transition: 0.2s
 
-/* --- welcome card media queries ---
-
-@media (max-width: 768px)
-
-  h2
-    font-size: 2.7em
-    line-height: 1.2em
-
-  h4
-    color: #404248
-    margin-top: 10px
-    margin-bottom: 0
-
-  h5
-    font-weight: 700
-    font-size: 0.9em
-    text-align: center
-    margin-top: 35px
-
-  .welcome-btn a
-    &:link, &:visited
-      padding: 10px 40px
-
-@media (max-width: 480px)
-  .welcome-card
-    padding: 30px 30px 25px 30px
-    width: 60%
-
-  h2
-    font-size: 2.1em
-    line-height: 1.2em
-
-@media (max-width: 400px)
-  .welcome-card
-    padding: 30px 25px 15px 25px
-    width: 60%
-
-  h2
-    font-size: 1.6em
-    line-height: 1.2em
-
-  h4
-    font-size: 0.9em
-
-  h5
-    font-size: 0.8em
-
-  .welcome-btn a
-    &:link, &:visited
-      padding: 8px 30px
-
-/* --- Homepage Galleries ---
-
+//  Homepage Galleries 
 .service-gallery, .book-gallery, .testimonial-gallery
   display: flex
   justify-content: center
-  align-content: space-between
   flex-flow: row wrap
   text-align: center
   width: 100%
 
-img
-  height: 100%
-  max-width: 100%
-
+// service gallery
 .service
   width: 25%
   padding: 0 1%
-  margin: 7% auto
 
+  @media ( max-width: $max-lg )
+    width: 50%
+    padding: 1% 5%
+
+  @media ( max-width: $max-sm )
+    width: 100%
+    padding: 2% 7%
+
+  img
+    margin-top: 5%
+    max-width: 100%
+ 
+    &:hover
+      transform: scale(1.05)
+      transition: 0.2s
+ 
+  @media ( max-width: $max-sm )
+    max-width: 70%
+  
+// book gallery --------
 .book-gallery
-  background-color: #4D8FBE
-  padding: 8% 0
+  background-color: $lighter-blue
+  padding: 5% 0
 
 .gallery-imgs
-  border-radius: 3px
-  box-shadow: 20px 20px 1px #3a3d44cb
-  margin: 0 6%
-  width: 20%
+  margin: 3% 2%
 
+  @media ( max-width: $max-sm )
+    &:last-child
+      margin-top: 3%  
+
+  @media ( min-width: $min-xl ) 
+    margin: 3% 4%   
+
+  img
+    border-radius: 2%
+    box-shadow: 20px 20px 1px #3a3d44cb
+    width: 70% 
+
+    @media ( max-width: $max-sm )
+      box-shadow: 15px 15px 1px #3a3d44cb
+
+    @media ( min-width: $min-lg )
+      width: 90%
+
+    &:hover
+      transform: scale(1.05)
+      transition: 0.3s
+ 
+// testimonial gallery  
 .testimonial
   display: flex
   justify-content: center
-  width: 50%
-  margin: 5% 0
+  width: 90%  
   padding: 3%
+
+  @media (min-width: $min-md)
+    width: 75%
+
+  @media (min-width: $min-lg)
+    width: 50%
+
+  // @media (min-width: $min-xl)
+  //   width: 43%
 
 .homepage-testimonial
   display: inherit
@@ -290,73 +303,25 @@ img
   align-items: center
   justify-content: center
 
+  &:hover
+    transform: scale(1.05)
+    transition: 0.3s
+
+  @media (min-width: $min-xl)
+    padding: 10%
+
   a
    color: $white
 
 .author-info
-   color: $dark-grey
-   font-size: 0.9em
+   font-size: 0.85em
    font-weight: 500
-   margin-top: 2%
+   line-height: 1.2
 
-/* --- homepage testimonial media queries ---
+   @media (max-width: $max-lg)
+    font-size: 0.95em
 
-@media (max-width: 1024px)
-  .service
-    width: 50%
-    padding: 0 4%
-    margin: 4% 0
-
-  .service-gallery
-    margin-top: 5%
-    margin-bottom: 7%
-
-  .homepage-testimonial
-    border: 1px solid $header-color
-
-@media (max-width: 768px)
-  .service
-    width: 48%
-    padding: 0 6%
-
-  .homepage-images
-    border: 3px solid $header-color
-
-  .testimonial
-    width: 100%
-    margin: 1% 0%
-
-  .testimonial-gallery
-    margin: 3% 0
-
-@media (max-width: 480px)
-  .service
-    width: 90%
-    padding: 0 4%
-
-    figure
-      width: 60%
-      margin: 0 auto
-
-  .book-gallery
-    padding: 10% 0
-
-  .testimonial
-    margin: 3% 0
-
-  .testimonial-gallery
-    padding: 5% 0
-
-  .homepage-images
-    border: 3px solid $header-color
-    width: 50%
-
-  .homepage-testimonial
-    border: .5px solid $header-color
-    border-radius: 40px
-
-/* ------------------- F O O T E R -------------------
-
+// Footer
 footer
   background-color: $main-brown
 
@@ -385,32 +350,26 @@ footer p
     &:hover
       color: $white
 
-/* --- footer styles media queries ---
-@media (max-width: 768px)
-  .social-icons
-    ul li
-      margin-top: 35px
-
-    img
-      width: 35px
-
-@media (max-width: 480px)
-  .social-icons ul li
-    padding: 0 15px
-
-/* ------------------- P A G E S -------------------
-/* --- ABOUT ---
+// About Page
+.about-page-wrapper
+  @media (min-width: $min-md)
+    display: flex
 
 .about-page-text
-  display: inline-block
-  width: 65%
-  padding: 0 3% 5% 3%
+  @media (min-width: $min-md) 
+    width: 60%
+
+  @media (min-width: $min-xl)   
+    width: 50%
+    margin: 2%
  
 .about-page-sidebar
-  width: 35%
-  display: inline-block
-  padding: 0 3%
+  @media (min-width: $min-md)
+    width: 40%
 
+  @media (min-width: $min-xl)   
+    width: 50%  
+    
 .about-summary-list
   color: $white
   font-size: 0.9em
@@ -418,141 +377,82 @@ footer p
   border: 1px solid $white
   display: block
   border-radius: 40px
-  padding: 8% 10%
-  margin-bottom: 50px
+  padding: 5%
+  margin: 3% 0
 
-/* --- about media queries ---
-@media (min-width: 1300px)
-  .about-summary
-    margin-top: -10%
+  @media (min-width: $min-md)
+    margin: 0 0 0 10%
+    padding: 8%
 
-@media (max-width: 1024px)
-  .about-summary
-    margin-top: -110%
-
-@media (max-width: 768px)
-  .about-page-sidebar
-    display: none
-
-  .about-page-text
-    width: 100%
-    text-align: center
-    padding: 0 5%
-
-/* --- SERVICES ---
-
-.service-intro
-  font-style: italic
-  line-height: 1.5em
-  margin: 3% 13% -2% 13%
-  text-align: center
-
+// Service Page
 .service-row
-  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  max-width: 1000px
+  margin: 5% auto
+
+  @media (min-width: $min-sm)
+    margin: 0 auto
 
 .service-item
-  display: flex
-  flex-wrap: row
-  margin-bottom: 80px
+  display: flex  
+  flex-direction: column
   align-items: center
+  margin: 3% auto
+
+  @media (min-width: $min-md)
+    flex-direction: row
 
 .service-item-images
-  margin-top: 5%
-  width: 40%
-  display: inline-block
-  padding-left: 7%
+  @media (min-width: $min-md)
+    padding: 0 3%  
 
 .service-item-text
-  width: 59%
-  display: inline-block
-  padding-right: 6%
+  width: 90%
+
+  h3
+    font-weight: 600
+
+  @media (min-width: $min-md)
+    width: 55%
 
 .service-item:nth-child(even)
-  display: flex
-  flex-direction: row-reverse
+  @media (min-width: $min-md)
+    display: flex  
+    flex-direction: row-reverse
 
-.service-item-text:nth-child(even)
-  width: 50%
-  padding-right: 0
-
-/* --- services media queries ---
-
-/* --- testimonials media queries ---
-@media (max-width: 1024px)
-  .service-item-images
-    width: 44%
-    padding-left: 3%
-
-  .service-item-text
-    width: 55%
-    padding-right: 0
-
-  .service-item
-    margin-bottom: 60px
-
-@media (max-width: 768px)
-  .service-item:nth-child(even)
-    display: flex
-    width: 100%
-    flex-direction: column
-
-  .service-item-text:nth-child(even)
-    width: 70%
-
-  .service-item-images
-    display: block
-    margin: 2% 20%
-    width: 50%
-
-  .service-item-text
-    padding-right: 0
-    text-align: center
-
-  .service-item
-    width: 100%
-    display: flex
-    flex-direction: column
-    margin-bottom: 60px
-
-  .tab-space
-    padding-left: 0px
-
-  h1
-    font-size: 2.8em
-
-  h3
-    font-size: 1.7em
-
-@media (max-width: 480px)
-  h1
-    font-size: 2.5em
-
-  h3
-    font-size: 1.5em
-
-/* --- TESTIMONIALS ---
-
+// Testimonial Page
 .testimonial-row
-  margin-bottom: 50px
-  padding: 0 3%
+  max-width: 1450px
+  margin: 0 auto
 
 .testimonial-item
   display: flex
   justify-content: space-around
   align-items: center
-  padding: 3%
+  padding: 4%
 
 .book-imgs 
-  box-shadow: 20px 20px 1px #3a3d44
-  height: 290px
+  display: none
+
+  @media (min-width: $min-md)
+    display: block
+    box-shadow: 20px 20px 1px #3a3d44
+    height: 290px
 
 .testimonial-text
   border: 2px solid $header-color
   border-radius: 50px
-  width: 55%
   line-height: 1.4em
-  padding: 5%
+  padding: 10% 8%
   text-align: center
+  width: 90%
+
+  @media (min-width: $min-md)
+    padding: 5%  
+    width: 55%
 
   p
     color: $white
@@ -561,142 +461,206 @@ footer p
     margin-top: 10px
     font-weight: 500
     font-size: 0.9em
-    color: $dark-grey
+    line-height: 1.4
 
 .testimonial-item:nth-child(even)
   display: flex
   flex-direction: row-reverse
 
 .testimonial-text:nth-child(even)
-  margin-left: 6%
+  margin-left: 4%
 
-/* --- testimonials media queries ---
-@media (max-width: 1024px)
-  .image-border
-    border: 3px solid $header-color
-
-  .book-images:nth-child(odd)
-    padding-left: 6%
-
-@media (max-width: 768px)
-  .book-images
-    display: none
-
-  .testimonial-text
-    display: block
-    border-radius: 40px
-    margin: 10px 0
-    width: 80%
-    padding: 5%
-
-  .author-info
-    font-size: 0.9em
-
-/* CONTACT PAGE
-
+// Contact Form
 .contact-form
-  padding: 0 8%
-  color: $header-color
   font: $p-font
+  font-size: 0.9em
+
+.wpforms-submit-container  
+  display: flex
+  justify-content: center
 
 div.wpforms-container-full .wpforms-form
   input[type=submit], button[type=submit], .wpforms-page-button
-    border-radius: 20px
-    border: none
-    background-color: $accent-green
+    border-radius: 50px
+    background: transparent
+    border: 2px solid $white
     color: $white
-    margin-top: 15px
-    padding: 10px 30px
+    margin-top: 30px
+    padding: 1% 5%
+  
+    &:hover
+      background: $white
+      color: $accent-green
+      opacity: 1
 
-/* BLOG
-/* ---- Blog Archive ----
-
-.archive-container .row
-  width: 100%
-
-.blog-row
-  margin: 4% auto
-  width: 95%
+// Blog
+.blog .container
+  max-width: 1500px
 
 .nv-index-posts
-  width: 70%
+  width: 100%
+
+  @media (min-width: $min-md)
+    width: 70%
+
+.nv-sidebar-wrap
+  @media (min-width: $min-md)
+    width: 20%  
 
 .nv-post-thumbnail-wrap
   margin-bottom: 3%
+  border: none
 
-.content h2
-  font-family: $header-font
-  font-size: 3em
-  font-weight: 800
+  a
+    color: $white
+    font-weight: 400
 
-.entry-title a:hover
-  color: $header-color
+    &:hover
+      transition: 0.2s
+      color: $header-color
 
-a
-  color: #404248
-
-  &:hover
-    transition: 0.2s
-    color: $header-color
-
-/* --- testimonials media queries ---
 @media (max-width: 960px)
   .widget_media_image, .widget_text
     display: none
 
-/* ---- Single Blog Post ----
+.nv-page-title 
+  display: none
 
-.nv-title-meta-wrap h1
-  color: $white
-  font-size: 3.5em
-  font-weight: 800
+.content  
+  padding: 4% 3% 5%
 
-.single-post-container .row
-  width: 100%
+  .entry-title
+    text-align: center
+    font-size: 3em
+    line-height: 1.1
 
-.nv-content-wrap .entry-content
-  margin: 20px
+    a
+      color: $header-color
+      font-size: 0.8em
+      font-style: italic
+      font-weight: 400 
 
-h2.comments-title
-  color: #404248
-  font-weight: 600
-  font-size: 1.3em
+  .nv-meta-list
+    text-align: center
+  
+    li 
+      color: $header-color
 
-.blog-sidebar p
-  text-align: center
+      a
+        color: $header-color
+
+  .entry-summary
+    width: 100%
+    margin: 0 auto
+
+    a 
+      color: $dark-grey
+      font-family: $p-font
+      font-size: 0.75em
+      padding-left: 1%
+
+    @media (min-width: $min-md)
+      width: 90%
+
+.layout-grid .content .nv-meta-list
+  margin-top: 20px    
 
 .post p
-  font-family: 'Garamond'
-  font-size: 1.3em
-  line-height: 1.5em
-  margin-bottom: 15px
-  font-weight: 500
+  font-family: $blog-font
+  font-weight: 400
+  font-size: 1.2em
+  line-height: 1.4
+  margin-bottom: 25px
 
-.entry-content h2
-  color: $header-color
+h2.comments-title
   font-weight: 600
-  font-size: 1.7em
-  line-height: 120%
-  margin: 40px 0 15px
-
+  font-size: 1.3em
+  
 .comment-reply-title
   color: $header-color
 
 .comments-area, .entry-content, .nv-content-wrap, .nv-thumb-wrap
   margin: 0 12%
 
-/* --- single blog post media queries ---
-@media (max-width: 1024px)
-  .nv-title-meta-wrap h1
-    font-size: 3.0em
-    line-height: 140%
+// Sidebar
+.blog-sidebar
+  display: block
+  padding: 0 8%
 
-@media (max-width: 480px)
-  .nv-title-meta-wrap h1
-    font-size: 2.3em
-    font-weight: 800
+.widget_search  
+  width: 90%
+  margin: 0 auto 20px
 
-  .entry-content h2
-    font-size: 1.5em
+.widget-title
+  font-family: $header-font  
 
+  @media (min-width: $min-lg)
+    text-align: center
+  
+// Single Post
+.entry-header
+  h1
+    color: $header-color
+    text-align: center
+    font-size: 3em
+    line-height: 1.5
+    width: 90%
+    margin: 0.5em auto
 
+    @media (min-width: $min-sm)
+      font-size: 3.5em
+      margin: 0.8em auto
+      
+
+  .nv-title-meta-wrap  
+    color: $header-color
+    text-align: center
+    ul li
+      color: $header-color
+      margin: 0.1em 0
+      a
+        color: $header-color 
+  
+.nv-comment-content a, .nv-content-wrap a:not(.button):not(.wp-block-file__button)
+  color: $header-color
+  text-decoration: none
+  font-style: italic
+  font-weight: 600
+
+.nv-content-wrap
+  width: 90%
+  margin: 0 auto
+
+  @media (min-width: $min-sm)
+    width: 75%
+
+  h5
+    color: $header-color
+    font-size: 1.5em  
+    margin-bottom: 0.6em
+
+.comments-area
+  h3
+    color: $white
+    font-weight: 600    
+
+#comments .comment-reply-title
+  margin-bottom: 0.5em    
+
+.single-post-container                
+  .nv-sidebar-wrap 
+    display: none
+
+.button.button-secondary, #comments input[type="submit"], #comments input[type=submit], .cart-off-canvas .button.nv-close-cart-sidebar, .wp-block-button.is-style-secondary .wp-block-button__link
+  color: $header-color 
+  font-family: $p-font  
+  font-size: 0.75em
+  text-transform: lowercase
+  border-radius: 30px 
+  padding: 10px 25px
+
+  &:hover
+    background-color: $header-color
+    border: $header-color
+    color: $background-blue
+    transition: 0.2s

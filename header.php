@@ -37,7 +37,7 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	
 		<div class="nav-bar">
 			<ul class="nav-list">
-				<li><a class="nav-item" href="<?php echo site_url('')?>">Home</a></li>
+				<!-- <li><a class="nav-item" href="<?php echo site_url('')?>">Home</a></li> -->
 				<li><a class="nav-item" href="<?php echo site_url('about')?>">About</a></li>
 				<li><a class="nav-item" href="<?php echo site_url('services')?>">Services</a></li>
 				<li><a class="nav-item" href="<?php echo site_url('testimonial')?>">Testimonials</a></li>

@@ -14,31 +14,30 @@
 
 get_header(); ?>
 
-<section class="page">
-	<div class="row">
+<section>
     <h1>About</h1>
      <?php while ( have_posts() ) : the_post();
      $about_img = get_field("about_image");
           $about_summary = get_field("about_summary");
           $crow_feet_img = get_field("about_page_deco_img");
           $size = "full"; ?>
-
+      <div class="about-page-wrapper">
         <div class="about-page-text">
            <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
         </div>  
 
-      <div class="about-page-sidebar">
-          <div class="about-image"> 
-            <?php echo wp_get_attachment_image($about_img, $size); ?> 
-          </div> 
+        <div class="about-page-sidebar">
+            <div class="about-image"> 
+              <?php echo wp_get_attachment_image($about_img, $size); ?> 
+            </div> 
 
-          <div class="about-summary">
-            <?php echo $about_summary;?>	
-          </div>
+            <div class="about-summary">
+              <?php echo $about_summary;?>	
+            </div>
+        </div>
       </div>
       <?php endwhile; // end of the loop. ?>     
-	</div>
 </section>
 
 <?php get_footer(); ?>
