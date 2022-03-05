@@ -123,13 +123,12 @@ header {
 
 .header-logo {
   margin: 0 auto;
-  padding-top: 5%;
-  width: 70%;
+  padding-top: 3%;
+  width: 60%;
 }
 @media (min-width: 768px) {
   .header-logo {
-    padding-top: 3%;
-    width: 55%;
+    width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -138,9 +137,9 @@ header {
     width: 40%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .header-logo {
-    width: 28%;
+    width: 30%;
   }
 }
 
@@ -169,7 +168,7 @@ header {
 
 .hero {
   position: relative;
-  background-image: url(../img/hero.png);
+  background-image: url(./img/hero.png);
   padding: 5% 10%;
 }
 @media (min-width: 992px) {
@@ -179,6 +178,11 @@ header {
     background-size: cover;
     background-position: center;
     padding: 11%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding: 12%;
   }
 }
 
@@ -342,7 +346,7 @@ header {
   justify-content: center;
 }
 .homepage-testimonial:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: 0.3s;
 }
 @media (min-width: 1200px) {
@@ -425,6 +429,12 @@ footer p a:hover {
   }
 }
 
+.about-image {
+  padding: 8%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .about-summary-list {
   color: #fff;
   font-size: 0.9em;
@@ -433,7 +443,7 @@ footer p a:hover {
   display: block;
   border-radius: 40px;
   padding: 5%;
-  margin: 3% 0;
+  margin-top: 8%;
 }
 @media (min-width: 768px) {
   .about-summary-list {
@@ -511,7 +521,7 @@ footer p a:hover {
 @media (min-width: 768px) {
   .book-imgs {
     display: block;
-    box-shadow: 20px 20px 1px #3a3d44;
+    box-shadow: 20px 25px 1px #3a3d44;
     height: 290px;
   }
 }
@@ -681,6 +691,14 @@ h2.comments-title {
 .blog-sidebar {
   display: block;
   padding: 0 8%;
+}
+.blog-sidebar a {
+  color: #F7F2ED;
+}
+.blog-sidebar a:hover {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
 .widget_search {

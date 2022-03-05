@@ -124,19 +124,18 @@ header
 
 .header-logo
   margin: 0 auto
-  padding-top: 5%
-  width: 70%
+  padding-top: 3%
+  width: 60%
 
   @media ( min-width: $min-md )
-    padding-top: 3%
-    width: 55%
+    width: 50%
 
   @media ( min-width: $min-lg )
     padding-top: 1.5%
     width: 40%
 
-  @media ( min-width: $min-xl )
-    width: 28%
+  @media ( min-width: $min-xxl )
+    width: 30%
 
 // Nav Menu
 .builder-item
@@ -163,7 +162,7 @@ header
 // Hero Section
 .hero
   position: relative
-  background-image: url(../img/hero.png)
+  background-image: url(./img/hero.png)
   padding: 5% 10%
 
   @media ( min-width: $min-lg )
@@ -172,6 +171,9 @@ header
     background-size: cover
     background-position: center
     padding: 11%
+
+  @media ( min-width: $min-xl ) 
+    padding: 12% 
     
 .hero-card
   background-color: $header-color
@@ -290,9 +292,6 @@ header
   @media (min-width: $min-lg)
     width: 50%
 
-  // @media (min-width: $min-xl)
-  //   width: 43%
-
 .homepage-testimonial
   display: inherit
   flex-direction: column
@@ -304,7 +303,7 @@ header
   justify-content: center
 
   &:hover
-    transform: scale(1.05)
+    transform: scale(1.03)
     transition: 0.3s
 
   @media (min-width: $min-xl)
@@ -369,6 +368,11 @@ footer p
 
   @media (min-width: $min-xl)   
     width: 50%  
+
+.about-image
+  padding: 8%
+  max-width: 500px
+  margin: 0 auto    
     
 .about-summary-list
   color: $white
@@ -378,7 +382,7 @@ footer p
   display: block
   border-radius: 40px
   padding: 5%
-  margin: 3% 0
+  margin-top: 8%
 
   @media (min-width: $min-md)
     margin: 0 0 0 10%
@@ -439,7 +443,7 @@ footer p
 
   @media (min-width: $min-md)
     display: block
-    box-shadow: 20px 20px 1px #3a3d44
+    box-shadow: 20px 25px 1px #3a3d44
     height: 290px
 
 .testimonial-text
@@ -587,6 +591,14 @@ h2.comments-title
   display: block
   padding: 0 8%
 
+  a
+    color: $header-color
+
+    &:hover
+      color: $white
+      font-weight: 600
+      transition: 0.2s
+
 .widget_search  
   width: 90%
   margin: 0 auto 20px
@@ -596,6 +608,7 @@ h2.comments-title
 
   @media (min-width: $min-lg)
     text-align: center
+   
   
 // Single Post
 .entry-header
