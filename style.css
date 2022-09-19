@@ -749,6 +749,15 @@ h2.comments-title {
   color: #F7F2ED;
 }
 
+.entry-content h2 {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.3em 0;
+  letter-spacing: 0.5px;
+}
+
 .nv-comment-content a, .nv-content-wrap a:not(.button):not(.wp-block-file__button) {
   color: #F7F2ED;
   text-decoration: none;
@@ -769,6 +778,11 @@ h2.comments-title {
   color: #F7F2ED;
   font-size: 1.5em;
   margin-bottom: 0.6em;
+}
+
+.nv-tag-list {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .comments-area h3 {

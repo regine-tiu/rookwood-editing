@@ -16,9 +16,14 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta property="og:description" content="I believe that, at its heart, editing is about collaboration. My job is to help you, the author, clarify your vision of your project and bring your words to life" />
+	
+	<!-- Twitter -->
+	<meta property="twitter:image" content="img/twitter_preview.png">
+	
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="manifest" href="/site.webmanifest">
 	<link rel="stylesheet" href="https://use.typekit.net/sku3vdx.css">
