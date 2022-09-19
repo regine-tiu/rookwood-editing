@@ -17,6 +17,9 @@ $header_classes = apply_filters( 'nv_header_classes', 'header' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta property="og:description" content="I believe that, at its heart, editing is about collaboration. My job is to help you, the author, clarify your vision of your project and bring your words to life" />
 	
+	<!-- Facebook -->
+	<meta property="og:image" content="img/twitter_preview.png">
+
 	<!-- Twitter -->
 	<meta property="twitter:image" content="img/twitter_preview.png">
 	
